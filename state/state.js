@@ -35,6 +35,10 @@ const generateChart = () => {
     dispatchAction(ACTIONS.generateChart);
 };
 
+const handleChartGeneration = (handler) => {
+    handleAction(ACTIONS.generateChart, handler);
+};
+
 handleChartDataSelection(fileData => {
     store.chartData = fileData;
 });
@@ -47,6 +51,7 @@ export {
     getChartType,
     getFileData,
     handleChartDataSelection,
+    handleChartGeneration,
     handleChartTypeSelection,
     setChartData,
     setChartType
