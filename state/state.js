@@ -6,7 +6,8 @@ const ACTIONS = {
 };
 
 const store = {
-    chartData: null
+    chartData: null,
+    chartType: null,
 };
 
 const setChartData = (fileData) => {
@@ -19,8 +20,28 @@ const handleChartDataSelection = (handler) => {
 
 const getFileData = () => store.chartData;
 
-handleChartDataSelection((fileData) => {
+const setChartType = (chartType) => {
+    dispatchAction(ACTIONS.setChartType, chartType);
+};
+
+const handleChartTypeSelection = (handler) => {
+    handleAction(ACTIONS.setChartType, handler);
+};
+
+const getChartType = () => store.chartType;
+
+handleChartDataSelection(fileData => {
     store.chartData = fileData;
 });
+handleChartTypeSelection(chartType => {
+    store.chartType = chartType;
+});
 
-export { getFileData, handleChartDataSelection, setChartData };
+export {
+    getChartType,
+    getFileData,
+    handleChartDataSelection,
+    handleChartTypeSelection,
+    setChartData,
+    setChartType
+};
