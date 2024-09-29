@@ -4,6 +4,11 @@ import { setChartType } from "../state/state.js";
 class ChartTypeSelector extends WebComponent {
     options = [
         {
+            isInitialSelection: true,
+            label: "Select chart type",
+            value: "",
+        },
+        {
             label: "Line chart",
             value: "line"
         },
@@ -30,8 +35,10 @@ class ChartTypeSelector extends WebComponent {
     render() {
         return `
             <select id=${this.selectId}>
-                ${this.options.map(({ label, value }) =>
-                    `<option value="${value}">${label}</option>`
+                ${this.options.map(({ isInitialSelection, label, value }) =>
+                    `<option value="${value}"${isInitialSelection ? " selected" : ""}>
+                        ${label}
+                    </option>`
                 )}
             </select>
         `;

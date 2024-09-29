@@ -11,15 +11,15 @@ const store = {
     chartType: null,
 };
 
-const setChartData = (fileData) => {
-    dispatchAction(ACTIONS.setChartData, fileData);
+const setChartData = chartData => {
+    dispatchAction(ACTIONS.setChartData, chartData);
 };
 
 const handleChartDataSelection = (handler) => {
     handleAction(ACTIONS.setChartData, handler);
 };
 
-const getFileData = () => store.chartData;
+const getChartData = () => store.chartData;
 
 const setChartType = (chartType) => {
     dispatchAction(ACTIONS.setChartType, chartType);
@@ -48,8 +48,8 @@ handleChartTypeSelection(chartType => {
 
 export {
     generateChart,
+    getChartData,
     getChartType,
-    getFileData,
     handleChartDataSelection,
     handleChartGeneration,
     handleChartTypeSelection,
