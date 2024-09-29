@@ -1,6 +1,7 @@
 import { dispatchAction, handleAction } from "../lib/stateManagement.js";
 
 const ACTIONS = {
+    generateChart: "generate-chart",
     setChartData: "set-chart-data",
     setChartType: "set-chart-type",
 };
@@ -30,6 +31,10 @@ const handleChartTypeSelection = (handler) => {
 
 const getChartType = () => store.chartType;
 
+const generateChart = () => {
+    dispatchAction(ACTIONS.generateChart);
+};
+
 handleChartDataSelection(fileData => {
     store.chartData = fileData;
 });
@@ -38,6 +43,7 @@ handleChartTypeSelection(chartType => {
 });
 
 export {
+    generateChart,
     getChartType,
     getFileData,
     handleChartDataSelection,
