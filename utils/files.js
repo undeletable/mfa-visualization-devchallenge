@@ -51,9 +51,10 @@ const getDataFromExcelSpreadsheet = contents => {
 const getDataFromCSVFile = (contents) => {
     const rows = contents.split("\n");
     const headersRow = rows[0];
+    const dataRows = rows.slice(1);
     const headers = getCSVRowCells(headersRow);
     const data = [];
-    for (let currentRow of rows) {
+    for (let currentRow of dataRows) {
         if (currentRow) {
             const currentRowObject = {};
             const cells = getCSVRowCells(currentRow);
