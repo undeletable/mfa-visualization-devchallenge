@@ -1,0 +1,501 @@
+Year,Region,Mission Type,Diplomatic Missions,International Agreements,Agreement Type,Foreign Visits by Officials,Official Rank,Foreign Delegations to Ukraine,Trade Agreements Signed,Budget Spent (mln USD)
+2007,South America,Consulate,109,139,Cultural Exchange,47,Deputy Minister,25,39,23.5
+2001,Asia,Embassy,93,156,Security Pact,76,Deputy Minister,17,14,96.23
+2016,Europe,Embassy,103,112,Cultural Exchange,45,Minister,56,28,58.11
+2023,Asia,Delegation,99,112,Cultural Exchange,46,Ambassador,14,25,32.54
+2010,South America,Permanent Mission,96,153,Cultural Exchange,78,Deputy Minister,32,14,54.49
+2015,South America,Delegation,88,120,Political Agreement,38,Ambassador,25,32,61.08
+2000,Europe,Consulate,93,115,Political Agreement,22,Consul,62,31,88.73
+2015,Asia,Consulate,103,148,Cultural Exchange,31,Deputy Minister,14,31,28.17
+2009,Africa,Delegation,96,105,Security Pact,59,Minister,21,7,74.85
+2006,North America,Permanent Mission,84,101,Security Pact,46,Deputy Minister,15,10,72.68
+2012,Europe,Embassy,98,111,Cultural Exchange,31,Consul,46,8,31.63
+2021,Europe,Embassy,84,121,Cultural Exchange,62,Deputy Minister,51,12,58.22
+2002,North America,Delegation,92,149,Trade Agreement,50,Minister,25,29,19.42
+2003,South America,Permanent Mission,92,118,Trade Agreement,42,Ambassador,43,10,43.75
+2003,Europe,Embassy,89,112,Political Agreement,47,Ambassador,21,37,37.0
+2008,Europe,Consulate,104,123,Cultural Exchange,45,Minister,37,29,67.26
+2007,North America,Embassy,107,118,Cultural Exchange,72,Minister,51,46,81.93
+2011,Europe,Delegation,103,159,Cultural Exchange,71,Consul,42,34,46.11
+2015,Europe,Embassy,107,137,Security Pact,43,Consul,52,27,52.62
+2002,South America,Delegation,109,132,Cultural Exchange,71,Ambassador,35,13,35.82
+2004,South America,Consulate,108,152,Trade Agreement,36,Ambassador,61,12,47.28
+2007,North America,Permanent Mission,93,159,Security Pact,50,Minister,10,31,8.94
+2009,Africa,Consulate,85,150,Political Agreement,70,Consul,57,33,73.21
+2012,Asia,Permanent Mission,87,124,Political Agreement,68,Deputy Minister,17,35,23.14
+2015,North America,Embassy,105,109,Security Pact,42,Consul,31,37,98.66
+2014,Asia,Consulate,106,112,Trade Agreement,77,Minister,20,43,80.94
+2009,Africa,Permanent Mission,103,136,Trade Agreement,54,Consul,18,6,85.34
+2022,North America,Delegation,94,116,Cultural Exchange,30,Deputy Minister,55,35,72.6
+2018,Africa,Consulate,88,144,Trade Agreement,70,Ambassador,41,35,60.54
+2018,North America,Delegation,102,154,Cultural Exchange,64,Deputy Minister,23,8,57.97
+2019,Asia,Consulate,96,133,Security Pact,23,Minister,56,22,57.68
+2001,Asia,Embassy,103,155,Political Agreement,65,Ambassador,47,24,38.89
+2006,Africa,Delegation,90,132,Trade Agreement,25,Deputy Minister,47,38,60.57
+2023,Europe,Permanent Mission,91,120,Political Agreement,75,Consul,52,36,84.42
+2002,Asia,Embassy,86,111,Cultural Exchange,67,Consul,11,38,10.02
+2005,Europe,Permanent Mission,84,101,Political Agreement,53,Ambassador,39,21,71.52
+2023,North America,Permanent Mission,102,111,Cultural Exchange,43,Minister,20,26,64.13
+2009,Africa,Delegation,97,103,Cultural Exchange,32,Ambassador,47,35,45.02
+2020,Asia,Delegation,102,144,Political Agreement,67,Minister,35,35,88.8
+2002,North America,Delegation,105,156,Cultural Exchange,47,Deputy Minister,27,49,7.97
+2010,Europe,Embassy,107,107,Trade Agreement,29,Deputy Minister,60,44,97.04
+2020,Africa,Consulate,99,155,Security Pact,41,Minister,63,28,56.85
+2005,South America,Delegation,106,128,Political Agreement,65,Minister,50,43,17.32
+2002,Europe,Permanent Mission,92,145,Cultural Exchange,44,Ambassador,57,23,17.93
+2003,South America,Permanent Mission,99,101,Trade Agreement,21,Consul,33,45,73.39
+2018,South America,Permanent Mission,101,107,Trade Agreement,36,Deputy Minister,30,30,59.21
+2004,North America,Delegation,94,137,Security Pact,76,Ambassador,43,48,29.87
+2003,Africa,Permanent Mission,93,141,Security Pact,59,Ambassador,66,38,2.66
+2014,Asia,Embassy,97,117,Trade Agreement,41,Minister,18,45,71.43
+2006,Europe,Permanent Mission,91,124,Political Agreement,23,Consul,26,8,99.42
+2020,Europe,Consulate,86,136,Trade Agreement,23,Consul,68,46,33.74
+2006,North America,Delegation,107,122,Political Agreement,30,Ambassador,66,41,24.33
+2013,North America,Delegation,102,144,Political Agreement,69,Deputy Minister,27,49,93.83
+2011,North America,Consulate,87,149,Trade Agreement,41,Ambassador,15,49,63.85
+2000,Asia,Embassy,94,153,Political Agreement,34,Deputy Minister,46,11,71.0
+2014,Europe,Permanent Mission,83,155,Trade Agreement,72,Ambassador,53,14,77.2
+2017,South America,Permanent Mission,87,148,Trade Agreement,69,Consul,48,11,27.74
+2016,South America,Consulate,93,142,Trade Agreement,77,Ambassador,42,30,64.96
+2002,North America,Delegation,82,128,Political Agreement,50,Consul,35,28,79.51
+2016,Europe,Consulate,102,134,Cultural Exchange,77,Ambassador,26,33,39.69
+2008,North America,Delegation,86,127,Political Agreement,30,Minister,17,20,45.93
+2018,North America,Delegation,83,158,Security Pact,34,Deputy Minister,44,40,96.93
+2004,Europe,Embassy,109,142,Trade Agreement,23,Consul,54,42,40.69
+2008,South America,Embassy,94,142,Political Agreement,27,Minister,57,22,4.44
+2017,Asia,Delegation,90,103,Trade Agreement,55,Minister,11,6,27.07
+2008,South America,Consulate,85,137,Trade Agreement,66,Consul,13,37,4.57
+2002,Asia,Consulate,107,135,Cultural Exchange,37,Ambassador,56,39,88.61
+2017,South America,Embassy,92,134,Trade Agreement,39,Consul,19,31,92.13
+2021,Asia,Embassy,80,156,Political Agreement,29,Consul,22,19,98.78
+2013,Africa,Permanent Mission,80,122,Cultural Exchange,65,Consul,19,49,43.21
+2010,Africa,Permanent Mission,94,153,Cultural Exchange,66,Ambassador,34,29,14.06
+2010,Europe,Permanent Mission,89,143,Trade Agreement,30,Minister,39,42,71.76
+2009,Asia,Permanent Mission,89,158,Trade Agreement,30,Deputy Minister,42,41,24.43
+2005,South America,Delegation,92,115,Trade Agreement,27,Consul,24,32,95.21
+2021,Africa,Consulate,82,120,Cultural Exchange,77,Minister,33,21,12.27
+2017,Africa,Consulate,109,105,Political Agreement,67,Deputy Minister,45,44,77.94
+2023,Europe,Consulate,94,113,Political Agreement,59,Consul,22,48,81.18
+2023,Africa,Delegation,90,156,Political Agreement,25,Ambassador,50,32,11.92
+2017,South America,Permanent Mission,80,159,Security Pact,74,Deputy Minister,47,23,81.75
+2014,Africa,Delegation,81,132,Cultural Exchange,58,Deputy Minister,47,44,53.67
+2020,Asia,Delegation,101,148,Political Agreement,36,Consul,47,25,78.17
+2011,Europe,Permanent Mission,89,124,Cultural Exchange,72,Deputy Minister,44,42,90.65
+2021,Europe,Embassy,107,150,Security Pact,49,Deputy Minister,17,30,7.46
+2013,North America,Consulate,108,125,Political Agreement,70,Minister,37,27,8.15
+2009,South America,Delegation,87,150,Trade Agreement,39,Ambassador,64,17,82.84
+2005,South America,Permanent Mission,93,143,Political Agreement,79,Ambassador,10,46,54.76
+2014,Africa,Delegation,94,112,Trade Agreement,32,Ambassador,36,46,74.83
+2005,Europe,Consulate,89,119,Political Agreement,55,Consul,57,14,99.09
+2017,Europe,Embassy,106,131,Security Pact,25,Ambassador,55,11,2.9
+2007,Asia,Embassy,81,155,Security Pact,59,Deputy Minister,64,22,34.51
+2016,Africa,Embassy,89,115,Political Agreement,71,Deputy Minister,37,29,40.04
+2022,Asia,Delegation,107,106,Security Pact,41,Consul,62,6,28.83
+2020,South America,Permanent Mission,80,122,Political Agreement,79,Minister,49,18,95.69
+2006,North America,Delegation,84,102,Political Agreement,53,Minister,28,22,63.16
+2011,Europe,Embassy,96,101,Political Agreement,55,Deputy Minister,43,14,18.61
+2011,North America,Embassy,82,127,Cultural Exchange,59,Consul,10,44,55.46
+2013,North America,Permanent Mission,88,122,Cultural Exchange,23,Ambassador,44,31,3.4
+2018,South America,Permanent Mission,107,140,Political Agreement,63,Deputy Minister,13,35,44.17
+2007,Asia,Embassy,101,158,Cultural Exchange,60,Deputy Minister,21,11,16.64
+2002,Africa,Permanent Mission,98,116,Political Agreement,72,Minister,43,42,40.37
+2002,Europe,Consulate,86,132,Cultural Exchange,42,Minister,34,45,14.35
+2009,Africa,Embassy,95,144,Cultural Exchange,40,Minister,31,27,63.4
+2009,North America,Delegation,84,121,Cultural Exchange,22,Consul,52,14,87.28
+2007,Africa,Embassy,98,106,Trade Agreement,79,Ambassador,11,30,34.26
+2004,North America,Consulate,108,157,Political Agreement,58,Minister,33,38,45.85
+2015,Europe,Embassy,92,134,Security Pact,63,Consul,30,13,39.17
+2020,North America,Delegation,85,152,Political Agreement,25,Consul,68,24,73.77
+2022,North America,Consulate,91,123,Security Pact,56,Consul,56,34,91.85
+2001,South America,Permanent Mission,105,132,Trade Agreement,48,Consul,52,39,75.77
+2018,South America,Delegation,107,121,Security Pact,20,Deputy Minister,47,42,91.21
+2008,Europe,Embassy,102,111,Security Pact,41,Minister,58,49,4.01
+2000,Asia,Permanent Mission,109,117,Political Agreement,41,Deputy Minister,60,18,8.55
+2005,Europe,Delegation,97,107,Security Pact,20,Minister,38,37,89.56
+2011,Europe,Delegation,94,112,Trade Agreement,52,Minister,21,22,34.78
+2022,Asia,Embassy,87,126,Political Agreement,35,Ambassador,25,28,10.39
+2001,North America,Permanent Mission,97,156,Security Pact,79,Consul,62,6,59.32
+2007,Europe,Permanent Mission,87,131,Cultural Exchange,74,Deputy Minister,48,48,88.77
+2005,Africa,Embassy,89,129,Trade Agreement,27,Deputy Minister,46,44,48.86
+2010,North America,Delegation,106,138,Security Pact,33,Consul,66,23,5.17
+2010,Africa,Consulate,85,115,Security Pact,41,Ambassador,42,8,55.48
+2001,Asia,Permanent Mission,82,146,Trade Agreement,50,Deputy Minister,30,30,35.89
+2005,South America,Permanent Mission,96,106,Trade Agreement,31,Consul,28,9,14.49
+2005,Asia,Embassy,87,119,Trade Agreement,66,Deputy Minister,29,13,35.27
+2004,Africa,Permanent Mission,96,142,Security Pact,33,Ambassador,68,24,27.23
+2008,Asia,Embassy,97,131,Cultural Exchange,26,Deputy Minister,29,28,5.17
+2019,Europe,Permanent Mission,90,140,Political Agreement,33,Consul,27,28,58.34
+2002,Asia,Embassy,105,159,Security Pact,59,Ambassador,61,27,13.2
+2003,Asia,Delegation,82,150,Security Pact,37,Minister,57,5,64.65
+2013,North America,Delegation,85,101,Security Pact,23,Ambassador,25,25,32.2
+2017,Africa,Delegation,96,117,Security Pact,39,Deputy Minister,66,13,31.04
+2013,Asia,Embassy,87,127,Trade Agreement,73,Ambassador,33,42,15.38
+2011,Africa,Consulate,84,135,Security Pact,71,Consul,10,12,69.11
+2003,North America,Consulate,93,113,Cultural Exchange,32,Consul,58,17,11.03
+2019,Asia,Delegation,104,100,Security Pact,66,Ambassador,19,39,3.53
+2020,Europe,Permanent Mission,85,141,Political Agreement,68,Deputy Minister,17,33,5.61
+2005,Europe,Consulate,81,149,Trade Agreement,66,Deputy Minister,59,22,58.95
+2014,Europe,Consulate,94,112,Cultural Exchange,61,Minister,42,16,18.58
+2022,Africa,Consulate,98,109,Trade Agreement,30,Deputy Minister,21,45,88.48
+2018,North America,Permanent Mission,93,112,Trade Agreement,73,Ambassador,40,42,37.23
+2019,Asia,Delegation,103,100,Trade Agreement,45,Ambassador,59,23,15.85
+2018,North America,Permanent Mission,99,150,Trade Agreement,48,Consul,51,23,13.62
+2013,Europe,Delegation,94,109,Cultural Exchange,20,Consul,40,46,73.24
+2001,Africa,Embassy,91,123,Trade Agreement,33,Consul,32,32,62.53
+2005,North America,Delegation,93,110,Cultural Exchange,68,Minister,60,18,52.66
+2009,South America,Delegation,90,114,Political Agreement,37,Deputy Minister,11,15,29.1
+2013,South America,Embassy,103,155,Trade Agreement,50,Minister,30,6,55.93
+2008,Asia,Embassy,93,156,Cultural Exchange,24,Minister,57,39,10.61
+2019,South America,Permanent Mission,84,136,Trade Agreement,59,Ambassador,52,22,61.94
+2012,South America,Consulate,99,108,Security Pact,57,Deputy Minister,42,28,48.08
+2019,North America,Embassy,106,121,Security Pact,27,Minister,14,47,81.16
+2007,Asia,Permanent Mission,92,145,Political Agreement,58,Ambassador,62,32,89.11
+2005,Asia,Consulate,99,135,Trade Agreement,79,Ambassador,58,20,55.72
+2011,Europe,Consulate,88,128,Cultural Exchange,38,Minister,23,43,90.16
+2011,Asia,Permanent Mission,101,121,Security Pact,38,Consul,47,33,96.5
+2003,Africa,Consulate,109,130,Security Pact,58,Consul,15,23,21.6
+2014,Europe,Embassy,87,100,Cultural Exchange,62,Minister,44,18,32.49
+2004,North America,Delegation,105,114,Cultural Exchange,66,Consul,13,37,31.07
+2015,Africa,Consulate,96,155,Political Agreement,64,Minister,50,10,14.52
+2001,Europe,Consulate,93,119,Security Pact,62,Ambassador,50,43,70.79
+2013,South America,Permanent Mission,105,100,Political Agreement,62,Deputy Minister,64,16,34.05
+2007,Asia,Embassy,92,155,Security Pact,72,Minister,55,45,51.59
+2006,North America,Consulate,100,104,Cultural Exchange,63,Deputy Minister,33,13,53.82
+2002,Europe,Delegation,101,115,Trade Agreement,52,Ambassador,33,17,90.19
+2016,Europe,Permanent Mission,100,151,Political Agreement,51,Ambassador,27,42,77.95
+2001,Europe,Embassy,102,148,Political Agreement,33,Deputy Minister,43,34,80.62
+2015,Africa,Embassy,105,152,Security Pact,38,Minister,20,48,43.11
+2007,Asia,Consulate,87,129,Trade Agreement,28,Deputy Minister,23,24,73.76
+2009,North America,Embassy,91,115,Cultural Exchange,34,Minister,39,16,8.41
+2004,Asia,Embassy,105,123,Security Pact,21,Ambassador,32,48,52.56
+2015,North America,Delegation,96,100,Trade Agreement,36,Consul,43,23,87.34
+2010,North America,Delegation,90,118,Security Pact,29,Consul,56,25,3.71
+2013,South America,Consulate,80,106,Security Pact,67,Ambassador,18,5,57.12
+2007,Asia,Embassy,93,131,Trade Agreement,79,Deputy Minister,24,8,5.24
+2022,Asia,Embassy,101,117,Security Pact,43,Consul,42,34,65.33
+2003,Asia,Delegation,87,108,Cultural Exchange,52,Consul,35,33,17.86
+2019,Africa,Permanent Mission,100,103,Cultural Exchange,75,Consul,32,14,32.07
+2001,South America,Embassy,86,152,Cultural Exchange,36,Ambassador,29,8,24.44
+2000,North America,Consulate,88,150,Trade Agreement,52,Ambassador,50,12,1.02
+2013,Europe,Embassy,103,125,Trade Agreement,74,Consul,26,35,7.79
+2020,Europe,Consulate,99,101,Security Pact,73,Consul,63,45,45.39
+2016,North America,Delegation,95,118,Political Agreement,65,Ambassador,36,35,28.75
+2010,Africa,Embassy,104,124,Political Agreement,66,Minister,51,39,72.23
+2009,South America,Permanent Mission,106,142,Trade Agreement,68,Ambassador,58,12,86.39
+2012,South America,Consulate,83,151,Political Agreement,33,Ambassador,48,45,40.99
+2013,North America,Consulate,107,126,Trade Agreement,44,Consul,68,15,53.52
+2012,South America,Consulate,104,110,Trade Agreement,42,Ambassador,63,27,10.1
+2008,North America,Consulate,93,144,Trade Agreement,23,Deputy Minister,64,21,59.06
+2007,Asia,Consulate,105,121,Security Pact,61,Minister,49,37,37.76
+2000,North America,Delegation,94,126,Political Agreement,30,Deputy Minister,34,30,25.59
+2005,North America,Permanent Mission,96,100,Trade Agreement,56,Deputy Minister,27,47,69.64
+2019,Africa,Embassy,96,140,Cultural Exchange,40,Ambassador,53,5,77.15
+2015,North America,Permanent Mission,84,159,Political Agreement,37,Deputy Minister,17,14,17.03
+2008,North America,Delegation,85,113,Political Agreement,40,Ambassador,32,10,40.4
+2002,Africa,Embassy,93,112,Cultural Exchange,60,Ambassador,67,22,28.32
+2003,Europe,Delegation,82,118,Political Agreement,47,Deputy Minister,20,47,15.66
+2000,Africa,Delegation,92,100,Trade Agreement,42,Deputy Minister,30,32,17.75
+2014,Europe,Consulate,107,103,Political Agreement,52,Consul,68,41,27.88
+2002,Europe,Permanent Mission,83,110,Security Pact,64,Consul,10,9,48.63
+2017,Africa,Embassy,107,155,Political Agreement,31,Deputy Minister,50,30,84.27
+2013,Africa,Permanent Mission,102,112,Security Pact,53,Ambassador,53,45,74.35
+2016,North America,Delegation,90,147,Trade Agreement,50,Consul,10,16,12.89
+2001,Asia,Permanent Mission,94,119,Cultural Exchange,27,Minister,61,36,78.23
+2016,Europe,Consulate,106,156,Cultural Exchange,79,Consul,22,22,59.54
+2007,Asia,Permanent Mission,95,113,Political Agreement,20,Consul,30,6,66.63
+2019,South America,Embassy,106,144,Trade Agreement,20,Minister,67,11,10.0
+2016,Africa,Permanent Mission,83,103,Trade Agreement,45,Consul,43,5,4.65
+2018,South America,Delegation,103,106,Security Pact,36,Deputy Minister,26,15,89.8
+2010,Europe,Permanent Mission,100,159,Political Agreement,64,Ambassador,52,19,66.03
+2023,Asia,Permanent Mission,100,144,Trade Agreement,49,Ambassador,63,7,18.0
+2008,Europe,Consulate,102,131,Political Agreement,59,Consul,33,24,67.46
+2010,North America,Delegation,99,113,Security Pact,25,Deputy Minister,36,37,20.42
+2005,North America,Embassy,96,116,Trade Agreement,70,Deputy Minister,65,23,91.85
+2013,Europe,Delegation,92,138,Cultural Exchange,38,Minister,64,9,98.54
+2002,South America,Delegation,109,123,Political Agreement,58,Consul,49,27,65.4
+2022,North America,Consulate,109,145,Security Pact,30,Minister,42,36,2.65
+2021,Europe,Permanent Mission,105,134,Security Pact,62,Ambassador,19,8,54.15
+2003,Asia,Delegation,88,139,Trade Agreement,54,Minister,35,18,60.17
+2003,Asia,Permanent Mission,101,152,Security Pact,44,Ambassador,21,26,5.47
+2010,Africa,Consulate,107,102,Political Agreement,40,Consul,25,44,13.29
+2012,South America,Permanent Mission,107,118,Cultural Exchange,46,Minister,37,10,45.84
+2018,Africa,Consulate,88,122,Cultural Exchange,48,Minister,39,43,64.24
+2012,Africa,Consulate,94,149,Security Pact,21,Deputy Minister,62,7,32.23
+2004,South America,Permanent Mission,107,151,Cultural Exchange,78,Deputy Minister,51,11,21.58
+2017,Europe,Consulate,80,119,Trade Agreement,24,Minister,37,43,83.57
+2009,Asia,Permanent Mission,106,139,Cultural Exchange,22,Ambassador,51,29,73.23
+2003,North America,Delegation,107,108,Cultural Exchange,40,Consul,47,16,64.82
+2010,North America,Consulate,87,118,Political Agreement,69,Minister,44,18,48.4
+2020,Europe,Delegation,86,120,Trade Agreement,74,Deputy Minister,27,25,9.21
+2002,Africa,Delegation,98,127,Political Agreement,69,Deputy Minister,15,10,27.6
+2010,North America,Embassy,82,133,Security Pact,24,Ambassador,50,11,83.63
+2013,Asia,Embassy,94,118,Trade Agreement,60,Ambassador,13,16,39.42
+2019,South America,Consulate,87,120,Political Agreement,76,Minister,31,32,3.39
+2017,South America,Consulate,109,151,Security Pact,37,Minister,36,38,9.51
+2005,South America,Embassy,95,127,Security Pact,75,Ambassador,66,5,86.1
+2013,North America,Consulate,82,131,Political Agreement,57,Minister,20,39,24.85
+2004,Africa,Consulate,82,116,Security Pact,52,Ambassador,48,23,27.3
+2017,Europe,Permanent Mission,86,141,Trade Agreement,49,Consul,69,44,62.84
+2023,Asia,Embassy,89,133,Security Pact,41,Consul,60,42,83.7
+2020,North America,Embassy,80,157,Cultural Exchange,70,Ambassador,44,49,5.61
+2011,Asia,Embassy,83,128,Security Pact,43,Minister,20,7,90.02
+2002,North America,Embassy,108,159,Political Agreement,63,Minister,47,9,12.77
+2001,South America,Delegation,91,121,Trade Agreement,56,Ambassador,22,34,61.57
+2020,South America,Consulate,89,138,Cultural Exchange,63,Ambassador,12,30,1.84
+2004,Europe,Delegation,88,154,Cultural Exchange,65,Consul,54,45,84.05
+2023,South America,Embassy,88,142,Trade Agreement,31,Ambassador,53,18,9.31
+2014,South America,Permanent Mission,95,139,Political Agreement,32,Consul,45,8,8.16
+2003,Asia,Delegation,89,117,Political Agreement,54,Consul,12,43,37.47
+2014,Europe,Delegation,99,110,Cultural Exchange,70,Minister,37,47,92.36
+2019,Asia,Consulate,88,120,Cultural Exchange,43,Deputy Minister,28,43,42.72
+2022,Asia,Consulate,107,106,Political Agreement,58,Ambassador,10,7,89.94
+2021,South America,Embassy,105,146,Political Agreement,30,Minister,68,44,17.0
+2008,Europe,Delegation,105,154,Political Agreement,35,Deputy Minister,68,42,54.99
+2004,Asia,Embassy,108,142,Political Agreement,22,Ambassador,58,47,7.95
+2021,Asia,Consulate,102,126,Cultural Exchange,35,Ambassador,25,38,16.39
+2019,Europe,Embassy,82,125,Security Pact,59,Consul,19,14,93.44
+2017,South America,Consulate,108,140,Political Agreement,67,Deputy Minister,14,22,64.15
+2019,Africa,Delegation,91,144,Trade Agreement,23,Minister,59,32,25.0
+2019,Asia,Delegation,86,159,Political Agreement,35,Minister,45,33,32.5
+2011,Asia,Permanent Mission,80,151,Trade Agreement,30,Consul,55,40,70.77
+2017,South America,Permanent Mission,101,144,Cultural Exchange,42,Deputy Minister,29,36,51.98
+2016,Europe,Embassy,89,134,Political Agreement,76,Ambassador,41,34,81.37
+2015,Africa,Consulate,80,130,Cultural Exchange,66,Ambassador,39,20,80.84
+2012,North America,Consulate,109,110,Cultural Exchange,63,Ambassador,20,46,81.38
+2010,North America,Delegation,82,146,Security Pact,22,Consul,60,9,7.37
+2013,Europe,Embassy,109,112,Trade Agreement,37,Deputy Minister,13,7,4.84
+2015,North America,Consulate,103,110,Trade Agreement,59,Deputy Minister,51,20,9.62
+2006,North America,Delegation,107,154,Trade Agreement,61,Deputy Minister,30,22,52.46
+2007,North America,Embassy,95,113,Trade Agreement,21,Ambassador,17,40,97.17
+2019,Africa,Permanent Mission,99,135,Political Agreement,38,Ambassador,20,38,91.53
+2019,Asia,Delegation,105,157,Political Agreement,47,Ambassador,56,13,32.49
+2010,North America,Consulate,82,158,Trade Agreement,53,Ambassador,22,44,39.09
+2015,North America,Delegation,98,138,Cultural Exchange,63,Consul,34,21,85.37
+2023,Asia,Permanent Mission,103,137,Security Pact,43,Deputy Minister,37,16,17.8
+2016,Europe,Permanent Mission,101,148,Cultural Exchange,29,Ambassador,43,15,25.95
+2018,South America,Embassy,82,123,Cultural Exchange,42,Consul,18,24,11.65
+2002,South America,Permanent Mission,84,105,Security Pact,67,Minister,49,28,83.72
+2018,South America,Delegation,99,101,Political Agreement,46,Consul,36,35,20.07
+2010,South America,Delegation,84,145,Trade Agreement,73,Deputy Minister,40,21,31.09
+2020,Africa,Embassy,88,158,Political Agreement,40,Ambassador,45,40,27.27
+2022,Europe,Consulate,99,144,Political Agreement,31,Deputy Minister,67,11,29.97
+2008,North America,Permanent Mission,102,118,Political Agreement,50,Consul,53,49,49.65
+2021,Europe,Embassy,103,129,Security Pact,37,Consul,38,33,50.46
+2019,Africa,Embassy,90,111,Trade Agreement,54,Deputy Minister,26,44,87.56
+2018,South America,Consulate,81,148,Trade Agreement,20,Consul,17,5,70.0
+2003,Europe,Delegation,95,115,Political Agreement,53,Consul,40,22,6.17
+2001,Europe,Delegation,109,119,Trade Agreement,56,Consul,26,11,26.52
+2014,Europe,Permanent Mission,101,134,Trade Agreement,32,Deputy Minister,26,44,33.79
+2007,Africa,Delegation,85,148,Cultural Exchange,77,Deputy Minister,59,15,58.46
+2019,South America,Consulate,108,117,Trade Agreement,62,Ambassador,53,36,55.83
+2019,North America,Embassy,103,141,Security Pact,52,Consul,32,27,88.39
+2004,South America,Permanent Mission,105,116,Cultural Exchange,63,Consul,28,43,43.6
+2005,Europe,Consulate,96,123,Cultural Exchange,78,Ambassador,40,37,45.1
+2012,Africa,Delegation,99,127,Trade Agreement,45,Ambassador,31,44,24.66
+2010,Asia,Consulate,84,130,Security Pact,27,Ambassador,31,7,16.96
+2013,North America,Permanent Mission,95,134,Trade Agreement,41,Consul,58,48,16.86
+2011,South America,Consulate,89,135,Cultural Exchange,47,Consul,38,12,25.77
+2014,Africa,Consulate,90,111,Trade Agreement,41,Deputy Minister,61,15,1.77
+2008,North America,Consulate,88,129,Trade Agreement,41,Ambassador,22,44,24.13
+2004,Asia,Embassy,93,138,Cultural Exchange,66,Consul,30,12,50.49
+2006,Asia,Delegation,88,120,Cultural Exchange,31,Minister,55,9,24.35
+2007,North America,Permanent Mission,98,127,Political Agreement,65,Ambassador,33,49,99.14
+2010,South America,Embassy,87,149,Political Agreement,43,Minister,41,49,97.45
+2015,Europe,Consulate,95,125,Political Agreement,79,Deputy Minister,55,35,23.35
+2015,Asia,Permanent Mission,101,132,Security Pact,29,Deputy Minister,17,28,45.79
+2021,Africa,Embassy,102,104,Political Agreement,24,Ambassador,44,7,23.94
+2012,Europe,Consulate,87,139,Political Agreement,71,Minister,38,26,55.37
+2011,Asia,Delegation,83,101,Security Pact,31,Minister,54,11,50.77
+2023,Asia,Permanent Mission,104,153,Trade Agreement,54,Consul,22,47,19.75
+2013,Europe,Consulate,95,100,Political Agreement,56,Consul,25,29,15.51
+2018,Asia,Permanent Mission,106,136,Security Pact,26,Deputy Minister,51,21,13.41
+2015,Europe,Delegation,81,146,Trade Agreement,38,Consul,47,11,91.77
+2021,North America,Embassy,91,115,Political Agreement,36,Deputy Minister,56,39,92.87
+2007,Europe,Embassy,95,104,Political Agreement,38,Deputy Minister,69,15,18.7
+2013,South America,Permanent Mission,98,127,Security Pact,44,Consul,12,22,67.95
+2016,North America,Embassy,104,150,Trade Agreement,29,Deputy Minister,36,20,69.92
+2017,Africa,Embassy,80,102,Cultural Exchange,40,Minister,21,21,47.23
+2007,Asia,Permanent Mission,86,152,Trade Agreement,32,Ambassador,29,37,24.91
+2009,Africa,Embassy,80,159,Political Agreement,61,Ambassador,41,18,37.7
+2007,Europe,Consulate,98,147,Trade Agreement,73,Deputy Minister,54,39,51.98
+2010,North America,Embassy,95,109,Trade Agreement,24,Minister,41,33,37.05
+2012,Africa,Consulate,82,120,Security Pact,66,Ambassador,27,30,36.88
+2007,Europe,Consulate,82,126,Political Agreement,50,Deputy Minister,16,29,7.69
+2005,Africa,Consulate,87,110,Security Pact,43,Minister,45,6,12.85
+2000,Africa,Consulate,99,128,Cultural Exchange,60,Consul,55,20,45.41
+2023,Africa,Embassy,93,114,Cultural Exchange,76,Deputy Minister,18,29,73.04
+2015,Africa,Embassy,99,135,Cultural Exchange,62,Minister,60,30,12.72
+2022,South America,Embassy,91,106,Cultural Exchange,70,Ambassador,52,43,91.72
+2017,North America,Permanent Mission,108,113,Trade Agreement,69,Deputy Minister,22,45,65.0
+2023,North America,Consulate,81,133,Cultural Exchange,37,Minister,20,40,78.09
+2007,Africa,Delegation,88,101,Political Agreement,69,Deputy Minister,45,27,80.28
+2014,Africa,Consulate,109,111,Security Pact,54,Deputy Minister,15,48,99.75
+2011,South America,Consulate,87,135,Political Agreement,73,Ambassador,14,28,23.82
+2004,South America,Delegation,84,122,Trade Agreement,59,Deputy Minister,51,17,45.26
+2013,South America,Consulate,102,136,Political Agreement,49,Consul,45,11,33.96
+2010,Europe,Embassy,91,118,Cultural Exchange,41,Deputy Minister,32,13,73.69
+2013,Africa,Embassy,82,112,Political Agreement,79,Consul,26,34,3.76
+2020,North America,Delegation,91,138,Cultural Exchange,58,Deputy Minister,53,34,1.54
+2006,South America,Consulate,89,143,Political Agreement,38,Consul,37,45,79.92
+2018,Asia,Embassy,109,158,Trade Agreement,70,Minister,28,12,19.35
+2000,Asia,Consulate,106,107,Trade Agreement,75,Deputy Minister,53,30,27.33
+2004,North America,Embassy,83,145,Political Agreement,67,Minister,28,40,32.02
+2020,Europe,Embassy,81,148,Cultural Exchange,54,Ambassador,47,13,60.51
+2012,Asia,Permanent Mission,88,100,Security Pact,52,Deputy Minister,66,20,69.8
+2018,Europe,Delegation,83,113,Security Pact,20,Minister,50,26,86.21
+2013,Europe,Embassy,81,138,Political Agreement,32,Ambassador,69,18,74.6
+2011,Asia,Consulate,95,158,Security Pact,33,Consul,14,16,3.92
+2013,Europe,Consulate,106,158,Cultural Exchange,32,Minister,42,48,97.37
+2000,South America,Embassy,81,128,Political Agreement,28,Deputy Minister,48,17,35.15
+2006,North America,Embassy,84,124,Trade Agreement,76,Minister,32,27,41.18
+2004,Africa,Delegation,85,121,Security Pact,70,Minister,25,25,18.4
+2015,Asia,Permanent Mission,80,137,Cultural Exchange,60,Consul,66,36,97.8
+2007,South America,Delegation,104,132,Cultural Exchange,25,Consul,19,23,7.0
+2007,Asia,Embassy,80,132,Cultural Exchange,39,Minister,46,41,77.16
+2017,Asia,Delegation,92,112,Trade Agreement,42,Deputy Minister,50,25,26.78
+2017,Asia,Consulate,97,121,Cultural Exchange,62,Consul,49,23,25.05
+2007,South America,Consulate,86,107,Cultural Exchange,61,Minister,69,31,44.19
+2005,Africa,Consulate,93,115,Political Agreement,36,Minister,50,46,7.52
+2004,Asia,Permanent Mission,108,159,Cultural Exchange,56,Minister,63,30,35.76
+2015,Asia,Permanent Mission,86,104,Political Agreement,70,Minister,16,49,39.77
+2008,Europe,Permanent Mission,107,146,Security Pact,63,Consul,55,27,83.4
+2006,Europe,Delegation,83,130,Political Agreement,72,Ambassador,66,39,63.32
+2002,North America,Consulate,99,127,Trade Agreement,41,Consul,63,10,46.57
+2014,North America,Permanent Mission,103,118,Political Agreement,29,Minister,24,10,41.17
+2005,North America,Consulate,103,131,Political Agreement,65,Ambassador,38,9,65.33
+2005,Africa,Consulate,93,107,Political Agreement,22,Minister,12,49,76.51
+2007,Asia,Consulate,80,124,Trade Agreement,45,Consul,69,36,16.82
+2013,North America,Embassy,97,154,Security Pact,39,Ambassador,22,41,25.44
+2008,Asia,Consulate,91,114,Political Agreement,54,Minister,45,36,25.56
+2002,Asia,Permanent Mission,90,114,Trade Agreement,70,Consul,30,45,69.39
+2012,Asia,Permanent Mission,88,133,Security Pact,42,Ambassador,12,12,39.8
+2013,Europe,Embassy,82,140,Political Agreement,55,Consul,25,46,37.21
+2001,South America,Permanent Mission,102,151,Political Agreement,54,Deputy Minister,66,45,56.88
+2022,Africa,Delegation,84,113,Political Agreement,30,Minister,68,22,97.29
+2007,Africa,Embassy,108,143,Security Pact,60,Deputy Minister,27,16,6.36
+2000,Africa,Consulate,99,153,Political Agreement,53,Ambassador,30,7,26.34
+2014,Africa,Consulate,82,117,Trade Agreement,73,Deputy Minister,27,39,32.19
+2016,North America,Permanent Mission,82,149,Cultural Exchange,39,Minister,27,27,81.07
+2002,North America,Consulate,81,131,Cultural Exchange,34,Deputy Minister,13,25,42.99
+2017,South America,Delegation,108,131,Political Agreement,67,Minister,26,25,34.67
+2004,North America,Delegation,109,103,Political Agreement,75,Minister,20,48,96.4
+2003,Africa,Permanent Mission,98,144,Security Pact,53,Ambassador,20,34,80.68
+2007,Asia,Consulate,105,145,Political Agreement,53,Consul,53,19,67.09
+2011,Europe,Permanent Mission,98,135,Security Pact,56,Ambassador,11,31,27.28
+2021,Asia,Delegation,97,139,Cultural Exchange,66,Minister,59,19,43.41
+2002,South America,Delegation,105,109,Cultural Exchange,32,Consul,65,35,19.76
+2011,North America,Permanent Mission,103,103,Cultural Exchange,37,Minister,40,21,61.98
+2003,Asia,Consulate,94,148,Security Pact,76,Ambassador,27,21,11.87
+2007,North America,Embassy,87,111,Trade Agreement,70,Deputy Minister,25,16,90.1
+2002,Africa,Permanent Mission,88,124,Security Pact,45,Deputy Minister,48,20,99.39
+2013,South America,Permanent Mission,98,136,Security Pact,62,Deputy Minister,29,24,48.56
+2012,Asia,Embassy,85,138,Security Pact,75,Deputy Minister,32,33,36.59
+2006,Asia,Delegation,97,158,Trade Agreement,57,Consul,66,32,89.99
+2009,Africa,Delegation,90,141,Security Pact,53,Ambassador,28,34,64.84
+2009,Asia,Embassy,88,134,Political Agreement,41,Minister,68,44,60.92
+2003,Africa,Delegation,82,141,Security Pact,30,Deputy Minister,47,20,58.67
+2011,Asia,Consulate,105,147,Security Pact,51,Consul,18,6,25.11
+2002,Europe,Delegation,100,103,Security Pact,73,Minister,24,35,7.39
+2017,Africa,Delegation,84,120,Cultural Exchange,48,Ambassador,12,41,54.48
+2012,Europe,Embassy,104,149,Security Pact,49,Deputy Minister,25,24,11.55
+2017,South America,Embassy,84,123,Security Pact,71,Ambassador,20,34,81.4
+2001,North America,Delegation,106,135,Political Agreement,49,Consul,28,27,30.01
+2018,Asia,Embassy,108,134,Trade Agreement,44,Deputy Minister,44,38,49.61
+2016,South America,Embassy,100,119,Trade Agreement,62,Ambassador,28,18,91.45
+2002,Africa,Permanent Mission,87,103,Cultural Exchange,33,Ambassador,38,5,41.83
+2004,Asia,Permanent Mission,92,146,Security Pact,47,Minister,19,8,53.93
+2021,Asia,Embassy,106,137,Cultural Exchange,32,Minister,55,11,89.44
+2018,Europe,Consulate,100,153,Cultural Exchange,28,Minister,69,37,92.48
+2020,North America,Embassy,81,130,Security Pact,56,Ambassador,21,38,8.33
+2012,South America,Permanent Mission,103,103,Cultural Exchange,61,Ambassador,46,12,22.23
+2008,Asia,Consulate,83,140,Security Pact,21,Deputy Minister,13,33,78.27
+2019,Europe,Embassy,82,140,Political Agreement,49,Minister,33,13,5.22
+2021,North America,Embassy,87,102,Security Pact,22,Consul,37,36,85.21
+2016,Asia,Delegation,86,104,Political Agreement,50,Ambassador,33,16,87.31
+2015,Africa,Embassy,106,111,Cultural Exchange,61,Minister,69,21,95.92
+2014,Africa,Embassy,87,149,Cultural Exchange,75,Minister,40,17,1.94
+2004,Europe,Embassy,85,151,Political Agreement,67,Minister,18,20,48.22
+2003,South America,Consulate,93,113,Cultural Exchange,53,Minister,69,10,35.39
+2020,Africa,Consulate,83,104,Trade Agreement,29,Ambassador,17,16,21.01
+2014,Asia,Permanent Mission,91,111,Political Agreement,73,Ambassador,31,49,65.6
+2011,Asia,Embassy,103,121,Security Pact,46,Ambassador,26,17,85.04
+2004,Africa,Permanent Mission,80,128,Trade Agreement,33,Minister,46,16,29.08
+2021,Africa,Permanent Mission,100,127,Trade Agreement,55,Ambassador,68,32,29.79
+2019,North America,Permanent Mission,99,123,Political Agreement,71,Ambassador,33,45,39.67
+2018,Europe,Delegation,106,122,Trade Agreement,60,Deputy Minister,66,21,75.59
+2004,Asia,Delegation,104,147,Trade Agreement,25,Ambassador,66,22,20.23
+2023,Asia,Permanent Mission,92,141,Cultural Exchange,64,Minister,49,22,46.03
+2006,Asia,Delegation,93,117,Security Pact,22,Consul,67,40,84.16
+2016,Africa,Delegation,88,154,Trade Agreement,78,Consul,16,29,27.08
+2017,Asia,Consulate,98,117,Security Pact,57,Ambassador,46,8,37.16
+2010,Europe,Embassy,109,117,Trade Agreement,74,Ambassador,19,37,88.54
+2009,Africa,Delegation,94,121,Security Pact,52,Minister,38,36,31.99
+2022,Africa,Embassy,90,144,Political Agreement,77,Consul,54,43,90.0
+2002,Africa,Consulate,102,133,Security Pact,26,Deputy Minister,53,40,78.31
+2021,Europe,Delegation,83,129,Trade Agreement,64,Minister,13,9,70.32
+2005,Asia,Delegation,81,122,Trade Agreement,42,Minister,38,48,24.15
+2016,Europe,Consulate,90,157,Security Pact,32,Ambassador,11,47,48.25
+2005,North America,Consulate,107,120,Trade Agreement,77,Ambassador,41,22,30.77
+2009,Africa,Embassy,83,115,Political Agreement,60,Consul,59,16,28.16
+2004,Africa,Permanent Mission,89,124,Security Pact,57,Consul,52,23,8.16
+2002,South America,Embassy,98,121,Trade Agreement,73,Deputy Minister,44,22,95.51
+2003,South America,Consulate,97,100,Political Agreement,53,Ambassador,20,20,53.74
+2005,South America,Embassy,81,159,Security Pact,30,Ambassador,24,11,69.42
+2015,Africa,Permanent Mission,98,152,Cultural Exchange,20,Deputy Minister,11,12,58.09
+2023,Asia,Permanent Mission,108,125,Security Pact,63,Ambassador,25,16,4.32
+2020,Africa,Consulate,102,129,Security Pact,77,Ambassador,49,41,38.13
+2000,South America,Embassy,93,120,Cultural Exchange,30,Deputy Minister,29,44,21.03
+2004,North America,Permanent Mission,84,123,Cultural Exchange,74,Minister,54,14,85.21
+2008,Africa,Embassy,82,152,Security Pact,58,Consul,69,46,94.25
+2019,North America,Embassy,100,118,Trade Agreement,67,Ambassador,62,45,94.97
+2019,North America,Embassy,96,151,Cultural Exchange,75,Consul,42,34,29.97
+2003,South America,Permanent Mission,89,120,Security Pact,63,Minister,66,15,68.04
+2005,Africa,Delegation,107,146,Political Agreement,55,Minister,12,37,28.27
+2023,Africa,Embassy,105,112,Cultural Exchange,43,Deputy Minister,60,43,40.5
+2020,Europe,Permanent Mission,86,110,Political Agreement,54,Deputy Minister,39,7,65.75
+2010,South America,Consulate,95,137,Political Agreement,34,Consul,31,20,45.68
+2012,Asia,Permanent Mission,95,133,Political Agreement,77,Deputy Minister,46,18,56.13
+2021,Asia,Embassy,81,147,Cultural Exchange,43,Consul,47,18,81.76
+2013,Europe,Consulate,101,131,Trade Agreement,32,Consul,37,27,59.19
+2002,South America,Delegation,80,138,Political Agreement,72,Deputy Minister,67,40,53.45
+2022,North America,Consulate,82,138,Security Pact,36,Deputy Minister,41,31,37.17
+2003,Asia,Embassy,92,109,Security Pact,31,Consul,49,7,19.36
+2011,South America,Permanent Mission,87,120,Cultural Exchange,69,Ambassador,36,6,38.57
+2009,Europe,Delegation,106,147,Security Pact,52,Consul,34,17,25.75
+2000,Europe,Consulate,92,141,Political Agreement,66,Minister,39,47,66.39
+2022,Africa,Delegation,94,155,Cultural Exchange,67,Consul,59,22,66.58
+2008,Europe,Embassy,82,129,Political Agreement,26,Deputy Minister,19,40,13.9
+2022,South America,Embassy,99,148,Security Pact,43,Consul,47,19,83.8
+2004,Europe,Embassy,107,109,Cultural Exchange,32,Consul,53,11,84.32
+2019,South America,Delegation,90,102,Cultural Exchange,46,Ambassador,48,12,88.61
+2022,Africa,Delegation,86,137,Political Agreement,68,Ambassador,10,6,21.41
+2007,Asia,Embassy,90,141,Security Pact,22,Deputy Minister,37,11,5.87
+2003,Africa,Consulate,92,148,Trade Agreement,37,Minister,14,22,27.16
+2014,South America,Delegation,104,125,Political Agreement,52,Consul,49,45,63.27
+2019,Europe,Delegation,98,142,Cultural Exchange,73,Consul,59,49,30.67
+2014,North America,Embassy,94,158,Trade Agreement,32,Ambassador,56,13,1.14
+2003,Asia,Consulate,100,104,Trade Agreement,24,Deputy Minister,36,41,70.63
+2007,North America,Embassy,93,133,Political Agreement,62,Consul,53,12,98.48
+2017,South America,Consulate,82,140,Trade Agreement,67,Consul,67,45,7.27
+2000,South America,Embassy,84,105,Trade Agreement,20,Ambassador,23,46,62.38
+2015,South America,Permanent Mission,108,136,Cultural Exchange,39,Minister,54,5,24.2
+2003,South America,Consulate,103,143,Security Pact,29,Minister,33,19,30.53
+2019,South America,Embassy,102,144,Trade Agreement,70,Consul,46,42,67.64
+2011,South America,Embassy,106,150,Security Pact,60,Deputy Minister,38,6,5.82
+2012,Africa,Permanent Mission,83,155,Security Pact,60,Ambassador,46,11,18.84
+2019,Europe,Consulate,87,111,Trade Agreement,33,Consul,25,20,34.98
+2014,Asia,Embassy,89,154,Cultural Exchange,30,Ambassador,60,15,31.59
+2015,Asia,Consulate,108,146,Trade Agreement,66,Consul,52,46,65.04
+2002,North America,Delegation,80,121,Trade Agreement,53,Consul,17,37,60.79
+2014,South America,Embassy,94,137,Political Agreement,75,Deputy Minister,52,19,26.73
+2009,Asia,Permanent Mission,80,156,Trade Agreement,79,Deputy Minister,24,10,80.03
+2019,South America,Delegation,89,140,Political Agreement,48,Consul,64,5,14.3
+2021,Africa,Embassy,81,154,Security Pact,60,Consul,14,21,50.62
+2014,South America,Consulate,97,157,Trade Agreement,60,Deputy Minister,27,25,88.06
+2014,Africa,Delegation,105,147,Security Pact,69,Ambassador,49,41,84.49
+2002,Africa,Permanent Mission,105,125,Security Pact,69,Deputy Minister,49,5,70.79
+2019,North America,Delegation,89,118,Political Agreement,50,Minister,57,36,90.98
+2012,South America,Permanent Mission,103,123,Political Agreement,73,Ambassador,67,35,1.76
+2006,Europe,Embassy,104,138,Trade Agreement,50,Consul,57,23,51.11
+2019,Europe,Consulate,92,114,Cultural Exchange,48,Ambassador,58,29,8.99
+2006,North America,Delegation,102,141,Cultural Exchange,21,Deputy Minister,32,21,92.13
