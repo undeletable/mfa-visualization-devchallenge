@@ -1,5 +1,5 @@
 import { WebComponent } from "../lib/WebComponent.js";
-import { setSelectedFileData } from "../state/state.js";
+import { setChartData } from "../state/state.js";
 import { getFileContents } from "../utils/files.js";
 
 class FileUpload extends WebComponent {
@@ -9,7 +9,7 @@ class FileUpload extends WebComponent {
         const fileInputElement = this.shadowRoot.getElementById(this.inputId);
         fileInputElement.addEventListener("change", event => {
             const file = event.target.files[0];
-            getFileContents(file).then(setSelectedFileData);
+            getFileContents(file).then(setChartData);
         });
     }
 

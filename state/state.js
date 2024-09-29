@@ -1,15 +1,26 @@
 import { dispatchAction, handleAction } from "../lib/stateManagement.js";
 
 const ACTIONS = {
-    setFile: "set-file",
+    setChartData: "set-chart-data",
+    setChartType: "set-chart-type",
 };
 
-const setSelectedFileData = (fileData) => {
-    dispatchAction(ACTIONS.setFile, fileData);
+const store = {
+    chartData: null
 };
 
-const handleFileDataSelection = (handler) => {
-    handleAction(ACTIONS.setFile, handler);
+const setChartData = (fileData) => {
+    dispatchAction(ACTIONS.setChartData, fileData);
 };
 
-export { handleFileDataSelection, setSelectedFileData };
+const handleChartDataSelection = (handler) => {
+    handleAction(ACTIONS.setChartData, handler);
+};
+
+const getFileData = () => store.chartData;
+
+handleChartDataSelection((fileData) => {
+    store.chartData = fileData;
+});
+
+export { getFileData, handleChartDataSelection, setChartData };
