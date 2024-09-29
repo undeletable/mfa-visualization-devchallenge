@@ -20,7 +20,7 @@ class ChartTypeSelector extends WebComponent {
     selectId = "chart-type-select";
 
     onConnected() {
-        const selectElement = document.getElementById(this.selectId);
+        const selectElement = this.shadowRoot.getElementById(this.selectId);
         selectElement.addEventListener("change", event => {
             const chartType = event.target.value;
             setChartType(chartType);
