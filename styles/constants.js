@@ -9,4 +9,8 @@ const COLORS = {
     white: "#FFFFFF"
 };
 
-export { COLORS };
+const CLASSNAMES = {
+    buttonPrimary: "primary",
+};
+
+export { CLASSNAMES, COLORS };

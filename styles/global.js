@@ -1,4 +1,4 @@
-import { COLORS } from "./constants.js";
+import { CLASSNAMES, COLORS } from "./constants.js";
 
 const styleSheet = `
     body {
@@ -9,6 +9,13 @@ const styleSheet = `
     }
     h1, h2, h3, h4, h5, h6 {
         color: ${COLORS.primary};
+    }
+    button.${CLASSNAMES.buttonPrimary} {
+        background-color: ${COLORS.primary};
+        border: none;
+        border-radius: 0;
+        color: ${COLORS.white};
+        cursor: pointer;
     }
 `;
 
