@@ -3,7 +3,18 @@
 
 import { COLORS } from "../styles/constants.js";
 
-// TODO add ticks
+const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
+
+const getLine = ({ color, x1, y1, x2, y2 }) => {
+    const line = document.createElementNS(SVG_NAMESPACE, "line");
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+    line.setAttribute("stroke", color);
+    return line;
+};
+
 const generateSVGChart = chartData => {
     const xLabel = chartData.headers[0];
     const yLabels = chartData.headers.slice(1);
@@ -31,12 +42,25 @@ const generateSVGChart = chartData => {
         return chartHeight - (value / maxYValue) * chartHeight;
     }
 
-    // Create the SVG element
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
+    const svg = document.createElementNS(SVG_NAMESPACE, "svg");
     svg.setAttribute("width", svgWidth);
     svg.setAttribute("height", svgHeight);
-    svg.setAttribute("xmlns", svgNS);
+    svg.setAttribute("xmlns", SVG_NAMESPACE);
+
+    chartData.data.forEach(item => {
+        const xValue = item[xLabel];
+
+        const xTickLine = getLine({
+            color: COLORS.gray,
+            x1: scaleX(xValue) + padding,
+            y1: padding,
+            x2: scaleX(xValue) + padding,
+            y2: svgHeight - padding,
+        });
+        svg.appendChild(xTickLine);
+    });
+
+    const drawnYTicks = {};
 
     yLabels.forEach((header, index) => {
         // TODO handle case of more than 5 lines
@@ -47,9 +71,21 @@ const generateSVGChart = chartData => {
             const x = scaleX(chartData.data[i][xLabel]) + padding;
             const y = scaleY(chartData.data[i][header]) + padding;
             path += ` L${x},${y}`;
+
+            if (!drawnYTicks[y]) {
+                const yTickLine = getLine({
+                    color: COLORS.gray,
+                    x1: padding,
+                    y1: y,
+                    x2: svgWidth - padding,
+                    y2: y,
+                });
+                svg.appendChild(yTickLine);
+                drawnYTicks[y] = true;
+            }
         }
 
-        const pathElement = document.createElementNS(svgNS, "path");
+        const pathElement = document.createElementNS(SVG_NAMESPACE, "path");
         pathElement.setAttribute("d", path);
         pathElement.setAttribute("fill", "none");
         pathElement.setAttribute("stroke", lineColor);
@@ -57,22 +93,22 @@ const generateSVGChart = chartData => {
         svg.appendChild(pathElement);
     });
 
-    // X-axis
-    const xAxis = document.createElementNS(svgNS, "line");
-    xAxis.setAttribute("x1", padding);
-    xAxis.setAttribute("y1", svgHeight - padding);
-    xAxis.setAttribute("x2", svgWidth - padding);
-    xAxis.setAttribute("y2", svgHeight - padding);
-    xAxis.setAttribute("stroke", COLORS.primary);
+    const xAxis = getLine({
+        color: COLORS.gray,
+        x1: padding,
+        y1: svgHeight - padding,
+        x2: svgWidth - padding,
+        y2: svgHeight - padding
+    });
     svg.appendChild(xAxis);
 
-    // Y-axis
-    const yAxis = document.createElementNS(svgNS, "line");
-    yAxis.setAttribute("x1", padding);
-    yAxis.setAttribute("y1", padding);
-    yAxis.setAttribute("x2", padding);
-    yAxis.setAttribute("y2", svgHeight - padding);
-    yAxis.setAttribute("stroke", COLORS.primary);
+    const yAxis = getLine({
+        color: COLORS.gray,
+        x1: padding,
+        y1: padding,
+        x2: padding,
+        y2: svgHeight - padding
+    });
     svg.appendChild(yAxis);
 
     return svg;
