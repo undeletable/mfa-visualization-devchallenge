@@ -11,6 +11,9 @@ import { LineChart } from "./components/LineChart.js";
 import { PageHeader } from "./components/PageHeader.js";
 import { PieChart } from "./components/PieChart.js";
 import { defineComponent } from "./lib/WebComponent.js";
+import { addGlobalStyles } from "./styles/global.js";
+
+addGlobalStyles();
 
 defineComponent("bar-chart", BarChart);
 defineComponent("chart-area", ChartArea);

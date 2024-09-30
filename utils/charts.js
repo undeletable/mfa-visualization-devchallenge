@@ -1,7 +1,7 @@
 // TODO width should be dynamic
 // TODO colours should be different and taken from theme
 
-import { COLORS } from "../constants/styles.js";
+import { COLORS } from "../styles/constants.js";
 
 // TODO add ticks
 const generateSVGChart = chartData => {
