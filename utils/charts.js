@@ -5,14 +5,25 @@ import { COLORS } from "../styles/constants.js";
 
 const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
 
-const getLine = ({ color, x1, y1, x2, y2 }) => {
+const getLine = ({ color, isDashed, x1, y1, x2, y2 }) => {
     const line = document.createElementNS(SVG_NAMESPACE, "line");
     line.setAttribute("x1", x1);
     line.setAttribute("y1", y1);
     line.setAttribute("x2", x2);
     line.setAttribute("y2", y2);
     line.setAttribute("stroke", color);
+    if (isDashed) {
+        line.setAttribute("stroke-dasharray", 4);
+    }
     return line;
+};
+
+const getText = ({ contents, x, y }) => {
+    const text = document.createElementNS(SVG_NAMESPACE, "text");
+    text.setAttribute("x", x);
+    text.setAttribute("y", y);
+    text.innerHTML = contents;
+    return text;
 };
 
 const generateSVGChart = chartData => {
@@ -52,12 +63,19 @@ const generateSVGChart = chartData => {
 
         const xTickLine = getLine({
             color: COLORS.gray,
+            isDashed: true,
             x1: scaleX(xValue) + padding,
             y1: padding,
             x2: scaleX(xValue) + padding,
             y2: svgHeight - padding,
         });
+        const xTickText = getText({
+            contents: xValue,
+            x: scaleX(xValue) + padding,
+            y: svgHeight - padding / 2
+        });
         svg.appendChild(xTickLine);
+        svg.appendChild(xTickText);
     });
 
     const drawnYTicks = {};
@@ -75,12 +93,19 @@ const generateSVGChart = chartData => {
             if (!drawnYTicks[y]) {
                 const yTickLine = getLine({
                     color: COLORS.gray,
+                    isDashed: true,
                     x1: padding,
                     y1: y,
                     x2: svgWidth - padding,
                     y2: y,
                 });
+                const yTickText = getText({
+                    contents: chartData.data[i][header],
+                    x: padding / 2,
+                    y,
+                });
                 svg.appendChild(yTickLine);
+                svg.appendChild(yTickText);
                 drawnYTicks[y] = true;
             }
         }
