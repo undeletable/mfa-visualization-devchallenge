@@ -1,5 +1,8 @@
 // TODO width should be dynamic
 // TODO colours should be different and taken from theme
+
+import { COLORS } from "../constants/styles.js";
+
 // TODO add ticks
 const generateSVGChart = chartData => {
     const xLabel = chartData.headers[0];
@@ -35,7 +38,9 @@ const generateSVGChart = chartData => {
     svg.setAttribute("height", svgHeight);
     svg.setAttribute("xmlns", svgNS);
 
-    yLabels.forEach(header => {
+    yLabels.forEach((header, index) => {
+        // TODO handle case of more than 5 lines
+        const lineColor = COLORS.chart[index];
         // Create the path for the line chart
         let path = `M${scaleX(chartData.data[0][xLabel]) + padding},${scaleY(chartData.data[0][header]) + padding}`;
         for (let i = 1; i < chartData.data.length; i++) {
@@ -47,7 +52,7 @@ const generateSVGChart = chartData => {
         const pathElement = document.createElementNS(svgNS, "path");
         pathElement.setAttribute("d", path);
         pathElement.setAttribute("fill", "none");
-        pathElement.setAttribute("stroke", "blue");
+        pathElement.setAttribute("stroke", lineColor);
         pathElement.setAttribute("stroke-width", "2");
         svg.appendChild(pathElement);
     });
@@ -58,7 +63,7 @@ const generateSVGChart = chartData => {
     xAxis.setAttribute("y1", svgHeight - padding);
     xAxis.setAttribute("x2", svgWidth - padding);
     xAxis.setAttribute("y2", svgHeight - padding);
-    xAxis.setAttribute("stroke", "black");
+    xAxis.setAttribute("stroke", COLORS.primary);
     svg.appendChild(xAxis);
 
     // Y-axis
@@ -67,7 +72,7 @@ const generateSVGChart = chartData => {
     yAxis.setAttribute("y1", padding);
     yAxis.setAttribute("x2", padding);
     yAxis.setAttribute("y2", svgHeight - padding);
-    yAxis.setAttribute("stroke", "black");
+    yAxis.setAttribute("stroke", COLORS.primary);
     svg.appendChild(yAxis);
 
     return svg;
