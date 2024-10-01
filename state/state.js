@@ -55,10 +55,8 @@ const handleChartGeneration = (handler) => {
 
 handleChartDataSelection(fileData => {
     store.chartData = fileData;
-    store.chartDataError = null;
 });
 handleChartDataError(error => {
-    store.chartData = null;
     store.chartDataError = error;
 });
 handleChartTypeSelection(chartType => {
