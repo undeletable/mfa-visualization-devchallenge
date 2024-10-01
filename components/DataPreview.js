@@ -32,12 +32,12 @@ class DataPreview extends WebComponent {
         return `
             <table>
                 <thead>
-                    ${this.chartData.headers.map(header => `<th>${header}</th>`)}
+                    ${this.mapForRender(this.chartData.headers, header => `<th>${header}</th>`)}
                 </thead>
                 <tbody>
-                    ${this.chartData.data.map(item =>
+                    ${this.mapForRender(this.chartData.data, item =>
                         `<tr>
-                            ${this.chartData.headers.map(header => `<td>${item[header] || 0}</td>`)}
+                            ${this.mapForRender(this.chartData.headers, header => `<td>${item[header] || 0}</td>`)}
                         </tr>`
                     )}
                 <tbody>
