@@ -1,6 +1,6 @@
 import { WebComponent } from "../lib/WebComponent.js";
-import { setChartData } from "../state/state.js";
-import { getFileContents } from "../utils/files.js";
+import { setChartData, setChartDataError } from "../state/state.js";
+import { getDataForChart } from "../utils/dataProcessing.js";
 
 class FileUpload extends WebComponent {
     inputId = "file-upload";
@@ -9,7 +9,9 @@ class FileUpload extends WebComponent {
         const fileInputElement = this.shadowRoot.getElementById(this.inputId);
         fileInputElement.addEventListener("change", event => {
             const file = event.target.files[0];
-            getFileContents(file).then(setChartData);
+            getDataForChart(file)
+                .then(setChartData)
+                .catch(setChartDataError);
         });
     }
 

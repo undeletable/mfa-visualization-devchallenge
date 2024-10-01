@@ -1,6 +1,6 @@
 import { WebComponent } from "../lib/WebComponent.js";
 import { getChartData } from "../state/state.js";
-import { generateSVGChart } from "../utils/charts.js";
+import { generateSVGChart } from "../utils/visualization.js";
 
 class LineChart extends WebComponent {
     onConnected() {

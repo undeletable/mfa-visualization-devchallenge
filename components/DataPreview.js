@@ -1,19 +1,33 @@
 import { WebComponent } from "../lib/WebComponent.js";
-import { handleChartDataSelection } from "../state/state.js";
+import { handleChartDataError, handleChartDataSelection } from "../state/state.js";
 
 class DataPreview extends WebComponent {
-    chartData = [];
+    chartData = null;
+
+    chartDataError = null;
 
     onConnected() {
         handleChartDataSelection(chartData => {
             this.chartData = chartData;
-            this.performRender();
+            if (chartData) {
+                this.chartDataError = null;
+                this.performRender();
+            }
+        });
+        handleChartDataError(error => {
+            this.chartDataError = error;
+            if (error) {
+                this.chartData = null;
+                this.performRender();
+            }
         })
     }
 
     render() {
-        if (this.chartData.length === 0) {
-            return "";
+        if (!this.chartData) {
+            return `
+                <p>${this.chartDataError?.message || "No data selected"}</p>
+            `;
         }
         return `
             <table>

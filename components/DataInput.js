@@ -15,7 +15,7 @@ class DataInput extends WebComponent {
     render() {
         return `
             <file-upload></file-upload>
-            <data-preview></data-preview>
+            <data-preview /></data-preview>
             <chart-type-selector></chart-type-selector>
             <button class=${CLASSNAMES.buttonPrimary} id=${this.generateButtonId}>
                 Generate chart

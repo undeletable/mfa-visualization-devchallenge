@@ -103,18 +103,64 @@ const getJSONContents = (fileName, contents) => {
     return getDataFromJSONFile(contents);
 };
 
+const getNormalizedData = ({ headers, data }) => {
+    const dataMap = {};
+    const xLabel = headers[0];
+    for (let dataItem of data) {
+        const xValueNumeric = Number(dataItem[xLabel] || 0);
+        if (!Number.isFinite(xValueNumeric)) {
+            continue;
+        }
+        const normalizedDataItem = {};
+        for (let dataKey in dataItem) {
+            const value = dataItem[dataKey];
+            const numericValue = Number(value || 0);
+            if (Number.isFinite(numericValue)) {
+                normalizedDataItem[dataKey] = numericValue;
+            }
+        }
+        if (dataMap.hasOwnProperty(xValueNumeric)) {
+            const existingValuesObject = dataMap[xValueNumeric];
+            for (let dataKey in normalizedDataItem) {
+                if (dataKey !== xLabel) {
+                    existingValuesObject[dataKey] = (existingValuesObject[dataKey] || 0) + normalizedDataItem[dataKey];
+                }
+            }
+        } else {
+            dataMap[xValueNumeric] = normalizedDataItem;
+            delete dataMap[xValueNumeric][xLabel];
+        }
+    }
+    const normalizedData = [];
+    for (let xValue in dataMap) {
+        normalizedData.push({
+            [xLabel]: Number(xValue),
+            ...dataMap[xValue]
+        });
+    }
+    return {
+        headers,
+        data: normalizedData
+    };
+};
+
 // TODO handle encoding
-const getFileContents = fileData => {
-    const { promise, resolve } = Promise.withResolvers();
+const getDataForChart = fileData => {
+    const { promise, reject, resolve } = Promise.withResolvers();
     const fileReader = new FileReader();
     fileReader.onload = event => {
-        const contents = event.target.result;
-        const fileName = fileData.name;
-        const jsonContents = getJSONContents(fileName, contents);
-        resolve(jsonContents);
+        try {
+            const contents = event.target.result;
+            const fileName = fileData.name;
+            const jsonContents = getJSONContents(fileName, contents);
+            const normalizedData = getNormalizedData(jsonContents);
+            resolve(normalizedData);
+        } catch (error) {
+            reject(error);
+        }
     };
     fileReader.readAsText(fileData);
     return promise;
 };
 
-export { getFileContents };
+export { getDataForChart };
