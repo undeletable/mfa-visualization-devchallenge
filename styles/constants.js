@@ -10,6 +10,7 @@ const COLORS = {
 };
 
 const CLASSNAMES = {
+    dragNDropArea: "drag-n-drop-area",
     buttonPrimary: "primary",
 };
 
