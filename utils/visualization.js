@@ -47,7 +47,7 @@ const generateSVGChart = chartData => {
     const chartHeight = svgHeight - padding * 2;
 
     const scaleX = value => {
-        return chartWidth - ((value - minXValue) / xRange) * chartWidth;
+        return ((value - minXValue) / xRange) * chartWidth;
     };
     const scaleY = value => {
         return chartHeight - (value / maxYValue) * chartHeight;
@@ -61,20 +61,23 @@ const generateSVGChart = chartData => {
     chartData.data.forEach(item => {
         const xValue = item[xLabel];
 
-        const xTickLine = getLine({
-            color: COLORS.gray,
-            isDashed: true,
-            x1: scaleX(xValue) + padding,
-            y1: padding,
-            x2: scaleX(xValue) + padding,
-            y2: svgHeight - padding,
-        });
+        if (xValue > minXValue) {
+            const xTickLine = getLine({
+                color: COLORS.gray,
+                isDashed: true,
+                x1: scaleX(xValue) + padding,
+                y1: padding,
+                x2: scaleX(xValue) + padding,
+                y2: svgHeight - padding,
+            });
+            svg.appendChild(xTickLine);
+        }
+
         const xTickText = getText({
             contents: xValue,
             x: scaleX(xValue) + padding,
             y: svgHeight - padding / 2
         });
-        svg.appendChild(xTickLine);
         svg.appendChild(xTickText);
     });
 
@@ -90,7 +93,7 @@ const generateSVGChart = chartData => {
             const y = scaleY(chartData.data[i][header]) + padding;
             path += ` L${x},${y}`;
 
-            if (!drawnYTicks[y]) {
+            if (!drawnYTicks[y] && chartData.data[i][header] !== 0) {
                 const yTickLine = getLine({
                     color: COLORS.gray,
                     isDashed: true,

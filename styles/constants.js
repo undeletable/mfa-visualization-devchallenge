@@ -1,6 +1,6 @@
 const COLORS = {
     accent: "#FFD700",
-    chart: ["#003366", "#0056A2", "#FFD700", "#F1F1F1", "#D32F2F"],
+    chart: ["#4E79A7", "#F28E2B", "#E15759", "#76B7B2", "#59A14F"],
     error: "#D32F2F",
     gray: "#F1F1F1",
     primary: "#003366",
