@@ -86,7 +86,6 @@ const generateSVGChart = chartData => {
     yLabels.forEach((header, index) => {
         // TODO handle case of more than 5 lines
         const lineColor = COLORS.chart[index];
-        // Create the path for the line chart
         let path = `M${scaleX(chartData.data[0][xLabel]) + padding},${scaleY(chartData.data[0][header]) + padding}`;
         for (let i = 1; i < chartData.data.length; i++) {
             const x = scaleX(chartData.data[i][xLabel]) + padding;
