@@ -44,15 +44,16 @@ class DataPreview extends WebComponent {
                     display: flex;
                     flex-direction: column;
                 }
-                table, th, td {
-                    border: 1px solid ${COLORS.secondary};
-                    border-collapse: collapse;
-                }
                 table {
+                    border-collapse: collapse;
                     margin-top: 12px;
                 }
                 th, td {
                     padding: 2px;
+                    text-align: center;
+                }
+                tbody tr:nth-child(odd) {
+                    background-color: ${COLORS.gray};
                 }
             </style>
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.previewSectionId}">
