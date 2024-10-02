@@ -97,28 +97,11 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
         const lineColor = COLORS.chart[index];
         let path = `M${scaleX(chartData.data[0][xLabel]) + CHART_PADDING},${scaleY(chartData.data[0][header]) + CHART_PADDING}`;
         for (let i = 1; i < chartData.data.length; i++) {
-            const x = scaleX(chartData.data[i][xLabel]) + CHART_PADDING;
-            const y = scaleY(chartData.data[i][header]) + CHART_PADDING;
+            const xValue = chartData.data[i][xLabel];
+            const yValue = chartData.data[i][header];
+            const x = scaleX(xValue) + CHART_PADDING;
+            const y = scaleY(yValue) + CHART_PADDING;
             path += ` L${x},${y}`;
-
-            if (!drawnYTicks[y] && chartData.data[i][header] !== 0) {
-                const yTickLine = getLine({
-                    color: COLORS.gray,
-                    isDashed: true,
-                    x1: CHART_PADDING,
-                    y1: y,
-                    x2: svgWidth - CHART_PADDING,
-                    y2: y,
-                });
-                const yTickText = getText({
-                    contents: chartData.data[i][header],
-                    x: CHART_PADDING / 2,
-                    y,
-                });
-                svg.appendChild(yTickLine);
-                svg.appendChild(yTickText);
-                drawnYTicks[y] = true;
-            }
 
             const dot = getDot({
                 color: lineColor,
