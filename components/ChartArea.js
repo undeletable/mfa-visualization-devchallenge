@@ -1,7 +1,7 @@
 import { MESSAGES } from "../constants/messages.js";
 import { BREAKPOINTS_PX, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
-import { exportAsPNG, exportAsSVG } from "../state/state.js";
+import { exportAsPNG, exportAsSVG, printChart } from "../state/state.js";
 import { SectionHeading } from "./SectionHeading.js";
 
 class ChartArea extends WebComponent {
@@ -11,6 +11,8 @@ class ChartArea extends WebComponent {
 
     svgExportButtonId = "export-svg";
 
+    printButtonId = "print";
+
     buttonsContainerClassName = "buttons-container";
 
     onConnected() {
@@ -19,6 +21,9 @@ class ChartArea extends WebComponent {
             switch (event.target.id) {
                 case this.pngExportButtonId:
                     exportAsPNG();
+                    break;
+                case this.printButtonId:
+                    printChart();
                     break;
                 case this.svgExportButtonId:
                     exportAsSVG();
@@ -70,6 +75,13 @@ class ChartArea extends WebComponent {
                         >
                             <material-icon name="image" size="1.5em"></material-icon>
                             ${MESSAGES.pngExport}
+                        </button>
+                        <button
+                            class="${GLOBAL_CLASSNAMES.buttonSecondary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
+                            id="${this.printButtonId}"
+                        >
+                            <material-icon name="print" size="1.5em"></material-icon>
+                            ${MESSAGES.print}
                         </button>
                     </div>
                 </section-heading>

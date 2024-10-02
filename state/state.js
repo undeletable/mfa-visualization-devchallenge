@@ -8,6 +8,7 @@ const ACTIONS = {
     generateChart: "generate-chart",
     hideDotTooltip: "hide-dot-tooltip",
     hideLineTooltip: "hide-line-tooltip",
+    print: "print",
     setChartData: "set-chart-data",
     setChartDataError: "set-chart-data-error",
 };
@@ -47,20 +48,13 @@ const handleChartGeneration = handler => {
     handleAction(ACTIONS.generateChart, handler);
 };
 
-handleChartDataSelection(fileData => {
-    store.chartData = fileData;
-});
-handleChartDataError(error => {
-    store.chartDataError = error;
-});
-
 const exportAsPNG = () => {
     dispatchAction(ACTIONS.exportAsPNG);
 };
 
 const handleChartPNGExport = handler => {
     handleAction(ACTIONS.exportAsPNG, handler);
-}
+};
 
 const exportAsSVG = () => {
     dispatchAction(ACTIONS.exportAsSVG);
@@ -68,7 +62,15 @@ const exportAsSVG = () => {
 
 const handleChartSVGExport = handler => {
     handleAction(ACTIONS.exportAsSVG, handler);
-}
+};
+
+const printChart = () => {
+    dispatchAction(ACTIONS.print);
+};
+
+const handleChartPrint = handler => {
+    handleAction(ACTIONS.print, handler);
+};
 
 const displayDotTooltip = ({ leftPosition, topPosition, xLabel, xValue, yLabel, yValue }) => {
     dispatchAction(ACTIONS.displayDotTooltip, {
@@ -113,6 +115,13 @@ const handleLineTooltipHide = handler => {
     handleAction(ACTIONS.hideLineTooltip, handler);
 };
 
+handleChartDataSelection(fileData => {
+    store.chartData = fileData;
+});
+handleChartDataError(error => {
+    store.chartDataError = error;
+});
+
 export {
     displayDotTooltip,
     displayLineTooltip,
@@ -125,6 +134,7 @@ export {
     handleChartDataSelection,
     handleChartGeneration,
     handleChartPNGExport,
+    handleChartPrint,
     handleChartSVGExport,
     handleDotTooltipDisplay,
     handleLineTooltipDisplay,
@@ -132,6 +142,7 @@ export {
     handleLineTooltipHide,
     hideDotTooltip,
     hideLineTooltip,
+    printChart,
     setChartData,
     setChartDataError,
 };

@@ -46,6 +46,7 @@ class FileUpload extends WebComponent {
         });
     }
 
+    // TODO add manual input
     render() {
         return `
             <style>
@@ -71,8 +72,9 @@ class FileUpload extends WebComponent {
                     <span>${MESSAGES.dragNDropAreaLabel}</span>
                 </div>
             </label>
+            <!-- TODO add xls and xlsx support -->
             <input
-                accept=".csv,.json" <!-- TODO add xls and xlsx support -->
+                accept=".csv,.json"
                 hidden
                 id=${this.inputId}
                 type="file"

@@ -3,13 +3,14 @@ import { WebComponent } from "../lib/WebComponent.js";
 import {
     getChartData,
     handleChartPNGExport,
+    handleChartPrint,
     handleChartSVGExport,
     handleDotTooltipDisplay,
     handleDotTooltipHide,
     handleLineTooltipDisplay,
     handleLineTooltipHide
 } from "../state/state.js";
-import { exportPNG, exportSVG } from "../utils/export.js";
+import { exportPNG, exportSVG, printSVG } from "../utils/export.js";
 import { generateSVGChart } from "../utils/visualization.js";
 
 class LineChart extends WebComponent {
@@ -49,6 +50,7 @@ class LineChart extends WebComponent {
         chartContainerElement.appendChild(svg);
         handleChartSVGExport(() => exportSVG(svg));
         handleChartPNGExport(() => exportPNG(svg));
+        handleChartPrint(() => printSVG(svg));
         
         const tooltipElement = this.getElement(this.tooltipId);
         

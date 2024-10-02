@@ -43,4 +43,24 @@ const exportPNG = svgElement => {
     image.src = urlObject;
 };
 
-export { exportPNG, exportSVG };
+
+const printSVG = svgElement => {
+    const iFrameElement = document.createElement("iframe");
+    iFrameElement.style.position = "absolute";
+    iFrameElement.style.top = `-${window.innerHeight}`;
+    document.body.appendChild(iFrameElement);
+
+    const iFrameDocument = iFrameElement.contentWindow.document;
+    iFrameDocument.open();
+    iFrameDocument.write(svgElement.outerHTML);
+    iFrameDocument.close();
+
+    iFrameElement.contentWindow.focus();
+    iFrameElement.contentWindow.print();
+
+    setTimeout(() => {
+        document.body.removeChild(iFrameElement);
+    }, 1000);
+};
+
+export { exportPNG, exportSVG, printSVG };

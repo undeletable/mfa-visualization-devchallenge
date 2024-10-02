@@ -5,6 +5,7 @@ const MESSAGES = {
     pageTitle: "Data visualization tool",
     pngExport: "Export as PNG",
     preview: "Data preview",
+    print: "Print",
     svgExport: "Export as SVG",
     unableToParseData: "Unable to parse data",
     visualization: "Data visualization"

@@ -1,6 +1,6 @@
 const BREAKPOINTS_PX = {
     small: 480,
-    medium: 690
+    medium: 740
 };
 
 const COLORS = {
