@@ -18,6 +18,8 @@ const store = {
     chartDataError: null,
 };
 
+// TODO define actions-related methods in more convenient way
+
 const setChartData = chartData => {
     dispatchAction(ACTIONS.setChartData, chartData);
     dispatchAction(ACTIONS.setChartDataError, null);
