@@ -105,7 +105,7 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
     const xRange = maxXValue - minXValue;
     const maxYValue = Math.max(...maxYValues);
 
-    const svgHeight = svgWidth / 1.5;
+    const svgHeight = Math.min(svgWidth / 1.5, window.innerHeight);
     const chartWidth = svgWidth - CHART_PADDING * 2;
     const chartHeight = svgHeight - CHART_PADDING * 2;
 
@@ -120,6 +120,24 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
     svg.setAttribute("width", svgWidth);
     svg.setAttribute("height", svgHeight);
     svg.setAttribute("xmlns", SVG_NAMESPACE);
+
+    const xAxis = getLine({
+        color: COLORS.gray,
+        x1: CHART_PADDING,
+        y1: svgHeight - CHART_PADDING,
+        x2: svgWidth - CHART_PADDING,
+        y2: svgHeight - CHART_PADDING
+    });
+    svg.appendChild(xAxis);
+
+    const yAxis = getLine({
+        color: COLORS.gray,
+        x1: CHART_PADDING,
+        y1: CHART_PADDING,
+        x2: CHART_PADDING,
+        y2: svgHeight - CHART_PADDING
+    });
+    svg.appendChild(yAxis);
 
     chartData.data.forEach(item => {
         const xValue = item[xLabel];
@@ -147,13 +165,14 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
     yLabels.forEach((header, index) => {
         // TODO handle case of more than 5 lines
         const lineColor = COLORS.chart[index];
-        let path = `M${scaleX(chartData.data[0][xLabel]) + CHART_PADDING},${scaleY(chartData.data[0][header]) + CHART_PADDING}`;
-        for (let i = 1; i < chartData.data.length; i++) {
+        let path = "";
+
+        for (let i = 0; i < chartData.data.length; i++) {
             const xValue = chartData.data[i][xLabel];
             const yValue = chartData.data[i][header];
             const x = scaleX(xValue) + CHART_PADDING;
             const y = scaleY(yValue) + CHART_PADDING;
-            path += ` L${x},${y}`;
+            path += `${i === 0 ? "M" : " L"}${x},${y}`;
 
             const dot = getDot({
                 color: lineColor,
@@ -194,24 +213,6 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
 
         svg.appendChild(pathElement);
     });
-
-    const xAxis = getLine({
-        color: COLORS.gray,
-        x1: CHART_PADDING,
-        y1: svgHeight - CHART_PADDING,
-        x2: svgWidth - CHART_PADDING,
-        y2: svgHeight - CHART_PADDING
-    });
-    svg.appendChild(xAxis);
-
-    const yAxis = getLine({
-        color: COLORS.gray,
-        x1: CHART_PADDING,
-        y1: CHART_PADDING,
-        x2: CHART_PADDING,
-        y2: svgHeight - CHART_PADDING
-    });
-    svg.appendChild(yAxis);
 
     return svg;
 };
