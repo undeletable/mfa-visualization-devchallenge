@@ -1,21 +1,54 @@
-import { COLORS, GLOBAL_CLASSNAMES } from "./constants.js";
+import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE } from "./constants.js";
 
 const styleSheet = `
     body {
         background-color: ${COLORS.white};
         font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 5px;
+    }
+    main {
+        width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
         color: ${COLORS.primary};
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+    button {
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        padding: 12px 24px;
+    }
+    button:hover {
+        ${HOVER_STYLE};
+    }
+    button.${GLOBAL_CLASSNAMES.buttonError} {
+        background-color: ${COLORS.error};
+        color: ${COLORS.white};
     }
     button.${GLOBAL_CLASSNAMES.buttonPrimary} {
         background-color: ${COLORS.primary};
-        border: none;
-        border-radius: 0;
         color: ${COLORS.white};
-        cursor: pointer;
+    }
+    button.${GLOBAL_CLASSNAMES.buttonSecondary} {
+        background-color: ${COLORS.accent};
+    }
+    section.${GLOBAL_CLASSNAMES.dataSection} {
+        overflow: auto;
+        width: 100%;
+    }
+    label, .${GLOBAL_CLASSNAMES.textSmall} {
+        color: ${COLORS.secondary};
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .${GLOBAL_CLASSNAMES.error} {
+        color: ${COLORS.error};
     }
 `;
 

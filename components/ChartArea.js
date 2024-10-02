@@ -1,19 +1,20 @@
 import { WebComponent } from "../lib/WebComponent.js";
-import { getChartType } from "../state/state.js";
+import { GLOBAL_CLASSNAMES } from "../styles/constants.js";
 
 class ChartArea extends WebComponent {
+    chartSectionId = "chart";
+
+    onConnected() {
+        this.scrollToElement(this.chartSectionId);
+    }
+
     render() {
-        const chartType = getChartType();
-        switch (chartType) {
-            case "bar":
-                return "<bar-chart></bar-chart>";
-            case "line":
-                return "<line-chart></line-chart>";
-            case "pie":
-                return "<pie-chart></pie-chart>";
-            default:
-                return "";
-        }
+        return `
+            <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.chartSectionId}">
+                <h2>Visualization</h2>
+                <line-chart></line-chart>
+            </section>
+        `;
     }
 }
 

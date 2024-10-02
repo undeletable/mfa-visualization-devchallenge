@@ -1,6 +1,6 @@
 import { WebComponent } from "../lib/WebComponent.js";
 import { setChartData, setChartDataError } from "../state/state.js";
-import { COLORS } from "../styles/constants.js";
+import { COLORS, HOVER_STYLE } from "../styles/constants.js";
 import { getDataForChart } from "../utils/dataProcessing.js";
 
 class FileUpload extends WebComponent {
@@ -10,13 +10,15 @@ class FileUpload extends WebComponent {
 
     dragNDropAreaClassName = "drag-n-drop-area";
 
+    dragNDropAreaActiveClassName = "drag-n-drop-area-active";
+
     processInput(file) {
         getDataForChart(file).then(setChartData).catch(setChartDataError);
     }
 
     onConnected() {
-        const dragNDropAreaElement = this.shadowRoot.getElementById(this.dragNDropAreaId);
-        const fileInputElement = this.shadowRoot.getElementById(this.inputId);
+        const dragNDropAreaElement = this.getElement(this.dragNDropAreaId);
+        const fileInputElement = this.getElement(this.inputId);
         dragNDropAreaElement.addEventListener("drop", event => {
             event.preventDefault();
             if (event.dataTransfer.items) {
@@ -31,7 +33,11 @@ class FileUpload extends WebComponent {
             }
         });
         dragNDropAreaElement.addEventListener("dragover", event => {
+            event.target.classList.add(this.dragNDropAreaActiveClassName);
             event.preventDefault();
+        });
+        dragNDropAreaElement.addEventListener("dragleave", event => {
+            event.target.classList.remove(this.dragNDropAreaActiveClassName);
         });
         fileInputElement.addEventListener("change", event => {
             const file = event.target.files[0];
@@ -43,13 +49,23 @@ class FileUpload extends WebComponent {
         return `
             <style>
                 .${this.dragNDropAreaClassName} {
+                    align-items: center;
+                    background-color: ${COLORS.gray};
                     border: 1px dashed ${COLORS.secondary};
                     cursor: pointer;
+                    display: flex;
+                    height: min(50vh, 300px);
+                    justify-content: center;
+                    width: 100%;
+                }
+                .${this.dragNDropAreaClassName}:hover,
+                .${this.dragNDropAreaClassName}.${this.dragNDropAreaActiveClassName} {
+                    ${HOVER_STYLE};
                 }
             </style>
             <label for=${this.inputId}>
                 <div class="${this.dragNDropAreaClassName}" id=${this.dragNDropAreaId}>
-                    Drag your file here or click to select
+                    <span>Drag your file here or click to select</span>
                 </div>
             </label>
             <input

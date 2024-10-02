@@ -3,14 +3,12 @@ import { dispatchAction, handleAction } from "../lib/stateManagement.js";
 const ACTIONS = {
     generateChart: "generate-chart",
     setChartData: "set-chart-data",
-    setChartData: "set-chart-data-error",
-    setChartType: "set-chart-type",
+    setChartDataError: "set-chart-data-error",
 };
 
 const store = {
     chartData: null,
     chartDataError: null,
-    chartType: null,
 };
 
 const setChartData = chartData => {
@@ -35,16 +33,6 @@ const handleChartDataError = (handler) => {
 
 const getChartDataError = () => store.chartDataError;
 
-const setChartType = (chartType) => {
-    dispatchAction(ACTIONS.setChartType, chartType);
-};
-
-const handleChartTypeSelection = (handler) => {
-    handleAction(ACTIONS.setChartType, handler);
-};
-
-const getChartType = () => store.chartType;
-
 const generateChart = () => {
     dispatchAction(ACTIONS.generateChart);
 };
@@ -59,20 +47,14 @@ handleChartDataSelection(fileData => {
 handleChartDataError(error => {
     store.chartDataError = error;
 });
-handleChartTypeSelection(chartType => {
-    store.chartType = chartType;
-});
 
 export {
     generateChart,
     getChartData,
     getChartDataError,
-    getChartType,
     handleChartDataError,
     handleChartDataSelection,
     handleChartGeneration,
-    handleChartTypeSelection,
     setChartData,
     setChartDataError,
-    setChartType
 };

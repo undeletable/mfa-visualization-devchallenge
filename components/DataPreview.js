@@ -1,7 +1,14 @@
 import { WebComponent } from "../lib/WebComponent.js";
-import { handleChartDataError, handleChartDataSelection } from "../state/state.js";
+import { generateChart, handleChartDataError, handleChartDataSelection } from "../state/state.js";
+import { COLORS, GLOBAL_CLASSNAMES } from "../styles/constants.js";
 
 class DataPreview extends WebComponent {
+    previewSectionId = "preview";
+
+    previewSectionClassName = "preview";
+
+    generateButtonId = "generate-chart-button";
+
     chartData = null;
 
     chartDataError = null;
@@ -12,6 +19,11 @@ class DataPreview extends WebComponent {
             if (chartData) {
                 this.chartDataError = null;
                 this.performRender();
+                this.scrollToElement(this.previewSectionId);
+                const generateButtonElement = this.getElement(this.generateButtonId);
+                generateButtonElement.addEventListener("click", () => {
+                    generateChart();
+                });
             }
         });
         handleChartDataError(error => {
@@ -20,28 +32,57 @@ class DataPreview extends WebComponent {
                 this.chartData = null;
                 this.performRender();
             }
-        })
+        });
     }
 
     render() {
-        if (!this.chartData) {
-            return `
-                <p>${this.chartDataError?.message || "No data selected"}</p>
-            `;
-        }
         return `
-            <table>
-                <thead>
-                    ${this.mapForRender(this.chartData.headers, header => `<th>${header}</th>`)}
-                </thead>
-                <tbody>
-                    ${this.mapForRender(this.chartData.data, item =>
-                        `<tr>
-                            ${this.mapForRender(this.chartData.headers, header => `<td>${item[header] || 0}</td>`)}
-                        </tr>`
-                    )}
-                <tbody>
-            </table>
+            <style>
+                .${GLOBAL_CLASSNAMES.dataSection} {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+                table, th, td {
+                    border: 1px solid ${COLORS.secondary};
+                    border-collapse: collapse;
+                }
+                th, td {
+                    padding: 2px;
+                }
+            </style>
+            <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.previewSectionId}">
+                <h2>Preview</h2>
+                ${this.chartData
+                    ? `
+                        <button class="${GLOBAL_CLASSNAMES.buttonPrimary}" id="${this.generateButtonId}"
+                        >
+                            Generate line chart
+                        </button>
+                        <table>
+                            <thead>
+                                ${this.mapForRender(this.chartData.headers, header => `<th>${header}</th>`)}
+                            </thead>
+                            <tbody>
+                                ${this.mapForRender(this.chartData.data, item =>
+                                    `<tr>
+                                        ${this.mapForRender(this.chartData.headers, header => `<td>${item[header] || 0}</td>`)}
+                                    </tr>`
+                                )}
+                            <tbody>
+                        </table>
+                    `
+                    : `<p>
+                        ${this.chartDataError
+                            ? `<span class="${GLOBAL_CLASSNAMES.error}">
+                                Unable to parse data: ${this.chartDataError.message}
+                            </span>`
+                            : "<span>No data selected</span>"
+                        }
+                    </p>`
+                }
+            </section>
         `;
     }
 }

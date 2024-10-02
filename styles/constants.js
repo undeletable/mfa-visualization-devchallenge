@@ -10,7 +10,14 @@ const COLORS = {
 };
 
 const GLOBAL_CLASSNAMES = {
-    buttonPrimary: "primary",
+    buttonError: "button-error",
+    buttonPrimary: "button-primary",
+    buttonSecondary: "button-secondary",
+    dataSection: "data-section",
+    error: "error",
+    textSmall: "text-small"
 };
 
-export { COLORS, GLOBAL_CLASSNAMES };
+const HOVER_STYLE = "opacity: 0.8;"
+
+export { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE };
