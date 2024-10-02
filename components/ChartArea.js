@@ -12,10 +12,9 @@ class ChartArea extends WebComponent {
     render() {
         return `
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.chartSectionId}">
-                <h2 class="${GLOBAL_CLASSNAMES.textWithIconContainer}">
-                    <material-icon name="monitoring"></material-icon>
-                    ${MESSAGES.visualization}
-                </h2>
+                <section-heading headingText="${MESSAGES.visualization}" iconName="monitoring">
+                    <!-- export button(s) -->
+                </section-heading>
                 <line-chart></line-chart>
             </section>
         `;

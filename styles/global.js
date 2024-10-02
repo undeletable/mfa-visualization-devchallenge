@@ -23,6 +23,7 @@ const styleSheet = `
         border-radius: 0;
         cursor: pointer;
         padding: 12px 24px;
+        text-transform: uppercase;
     }
     button:hover {
         ${HOVER_STYLE};
@@ -57,6 +58,19 @@ const styleSheet = `
         align-items: center;
         display: flex;
         gap: 0.25em;
+    }
+    header.${GLOBAL_CLASSNAMES.headingContainer} {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    header.${GLOBAL_CLASSNAMES.headingContainer} h1,
+    header.${GLOBAL_CLASSNAMES.headingContainer} h2,
+    header.${GLOBAL_CLASSNAMES.headingContainer} h3,
+    header.${GLOBAL_CLASSNAMES.headingContainer} h4,
+    header.${GLOBAL_CLASSNAMES.headingContainer} h5,
+    header.${GLOBAL_CLASSNAMES.headingContainer} h6 {
+        flex-grow: 1;
     }
 `;
 

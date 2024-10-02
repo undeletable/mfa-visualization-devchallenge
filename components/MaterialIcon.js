@@ -2,17 +2,19 @@ import { GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 
 class MaterialIcon extends WebComponent {
-    observedAttributes = ["name", "size"];
+    static observedAttributes = ["color", "name", "size"];
 
     render() {
+        const color = this.getAttribute("color");
         const name = this.getAttribute("name");
         const size = this.getAttribute("size");
 
         return `
-            ${size ? `
+            ${(color || size) ? `
                 <style>
                     .${GLOBAL_CLASSNAMES.materialIcon} {
-                        font-size: ${size};
+                        ${color ? `color: ${color};` : ""}
+                        ${size ? `font-size: ${size};` : ""}
                     }
                 </style>
             ` : ""}

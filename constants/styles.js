@@ -15,6 +15,7 @@ const GLOBAL_CLASSNAMES = {
     buttonSecondary: "button-secondary",
     dataSection: "data-section",
     error: "error",
+    headingContainer: "heading-container",
     materialIcon: "material-symbols-outlined",
     textSmall: "text-small",
     textWithIconContainer: "text-with-icon"

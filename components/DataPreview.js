@@ -2,6 +2,7 @@ import { MESSAGES } from "../constants/messages.js";
 import { COLORS, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { generateChart, handleChartDataError, handleChartDataSelection } from "../state/state.js";
+import { SectionHeading } from "./SectionHeading.js";
 
 class DataPreview extends WebComponent {
     previewSectionId = "preview";
@@ -57,19 +58,21 @@ class DataPreview extends WebComponent {
                 }
             </style>
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.previewSectionId}">
-                <h2 class="${GLOBAL_CLASSNAMES.textWithIconContainer}">
-                    <material-icon name="data_table"></material-icon>
-                    ${MESSAGES.preview}
-                </h2>
-                ${this.chartData
-                    ? `
-                        <button
+                <section-heading headingText="${MESSAGES.preview}" iconName="data_table">
+                    ${this.chartData
+                        ? `<button
                             class="${GLOBAL_CLASSNAMES.buttonPrimary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
                             id="${this.generateButtonId}"
+                            slot="${SectionHeading.rightEdgeSlotName}"
                         >
                             <material-icon name="monitoring" size="1.5em"></material-icon>
                             ${MESSAGES.generateChartButtonLabel}
-                        </button>
+                        </button>`
+                        : ""
+                    }
+                </section-heading>
+                ${this.chartData
+                    ? `
                         <table>
                             <thead>
                                 ${this.mapForRender(this.chartData.headers, header =>`<th>${header}</th>`)}
@@ -83,14 +86,16 @@ class DataPreview extends WebComponent {
                             <tbody>
                         </table>
                     `
-                    : `<div>
-                        ${this.chartDataError
-                            ? `<span class="${GLOBAL_CLASSNAMES.error}">
-                                ${MESSAGES.unableToParseData}: ${this.chartDataError.message}
-                            </span>`
-                            : `<span>${MESSAGES.noDataSelected}</span>`
-                        }
-                    </div>`
+                    : `
+                        <div>
+                            ${this.chartDataError
+                                ? `<span class="${GLOBAL_CLASSNAMES.error}">
+                                    ${MESSAGES.unableToParseData}: ${this.chartDataError.message}
+                                </span>`
+                                : `<span>${MESSAGES.noDataSelected}</span>`
+                            }
+                        </div>
+                    `
                 }
             </section>
         `;
