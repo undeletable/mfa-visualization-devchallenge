@@ -10,7 +10,9 @@ class PageHeader extends WebComponent {
                 }
             </style>
             <header>
-                <h1>${MESSAGES.pageTitle}</h1>
+                <h1>
+                    ${MESSAGES.pageTitle}
+                </h1>
             </header>
         `;
     }

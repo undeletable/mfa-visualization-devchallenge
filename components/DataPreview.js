@@ -54,11 +54,17 @@ class DataPreview extends WebComponent {
                 }
             </style>
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.previewSectionId}">
-                <h2>Preview</h2>
+                <h2 class="${GLOBAL_CLASSNAMES.textWithIconContainer}">
+                    <material-icon name="data_table"></material-icon>
+                    ${MESSAGES.preview}
+                </h2>
                 ${this.chartData
                     ? `
-                        <button class="${GLOBAL_CLASSNAMES.buttonPrimary}" id="${this.generateButtonId}"
+                        <button
+                            class="${GLOBAL_CLASSNAMES.buttonPrimary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
+                            id="${this.generateButtonId}"
                         >
+                            <material-icon name="monitoring" size="1.5em"></material-icon>
                             ${MESSAGES.generateChartButtonLabel}
                         </button>
                         <table>

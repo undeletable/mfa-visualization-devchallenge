@@ -55,6 +55,7 @@ class FileUpload extends WebComponent {
                     border: 1px dashed ${COLORS.secondary};
                     cursor: pointer;
                     display: flex;
+                    flex-direction: column;
                     height: min(50vh, 300px);
                     justify-content: center;
                     width: 100%;
@@ -66,6 +67,7 @@ class FileUpload extends WebComponent {
             </style>
             <label for=${this.inputId}>
                 <div class="${this.dragNDropAreaClassName}" id=${this.dragNDropAreaId}>
+                    <material-icon name="upload_file" size="2em"></material-icon>
                     <span>${MESSAGES.dragNDropAreaLabel}</span>
                 </div>
             </label>

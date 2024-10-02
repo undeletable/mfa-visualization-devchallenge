@@ -50,6 +50,14 @@ const styleSheet = `
     .${GLOBAL_CLASSNAMES.error} {
         color: ${COLORS.error};
     }
+    .${GLOBAL_CLASSNAMES.materialIcon} {
+        font-family: "Material Symbols Outlined";
+    }
+    .${GLOBAL_CLASSNAMES.textWithIconContainer} {
+        align-items: center;
+        display: flex;
+        gap: 0.25em;
+    }
 `;
 
 let isStyleSheetAdded = false;

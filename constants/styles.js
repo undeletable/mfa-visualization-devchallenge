@@ -15,7 +15,9 @@ const GLOBAL_CLASSNAMES = {
     buttonSecondary: "button-secondary",
     dataSection: "data-section",
     error: "error",
-    textSmall: "text-small"
+    materialIcon: "material-symbols-outlined",
+    textSmall: "text-small",
+    textWithIconContainer: "text-with-icon"
 };
 
 const HOVER_STYLE = "opacity: 0.8;"
