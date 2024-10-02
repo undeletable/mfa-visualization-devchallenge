@@ -1,13 +1,19 @@
-import { BREAKPOINTS_PX, COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX, TEXT_FLEX_STYLES } from "../constants/styles.js";
+import {
+    COLORS,
+    GLOBAL_CLASSNAMES,
+    HOVER_STYLE,
+    PAGE_MARGIN_PX,
+    TEXT_FLEX_STYLES
+} from "../constants/styles.js";
 
 const styleSheet = `
     body {
         background-color: ${COLORS.white};
+        color: ${COLORS.text};
         font-family: sans-serif;
         font-size: 16px;
         line-height: 24px;
         margin: ${PAGE_MARGIN_PX}px;
-        color-scheme: dark;
     }
     main {
         width: 100%;
@@ -39,6 +45,7 @@ const styleSheet = `
     }
     button.${GLOBAL_CLASSNAMES.buttonSecondary} {
         background-color: ${COLORS.accent};
+        color: ${COLORS.text};
     }
     section.${GLOBAL_CLASSNAMES.dataSection} {
         overflow: auto;
