@@ -1,3 +1,8 @@
+const BREAKPOINTS_PX = {
+    small: 480,
+    medium: 690
+};
+
 const COLORS = {
     accent: "#FFD700",
     chart: ["#4E79A7", "#F28E2B", "#E15759", "#76B7B2", "#59A14F"],
@@ -25,4 +30,17 @@ const HOVER_STYLE = "opacity: 0.8;";
 
 const PAGE_MARGIN_PX = 5;
 
-export { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX };
+const TEXT_FLEX_STYLES = `
+    align-items: center;
+    display: flex;
+    gap: 0.25em;
+`;
+
+export {
+    BREAKPOINTS_PX,
+    COLORS,
+    GLOBAL_CLASSNAMES,
+    HOVER_STYLE,
+    PAGE_MARGIN_PX,
+    TEXT_FLEX_STYLES
+};

@@ -1,5 +1,5 @@
 import { MESSAGES } from "../constants/messages.js";
-import { GLOBAL_CLASSNAMES } from "../constants/styles.js";
+import { BREAKPOINTS_PX, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { exportAsPNG, exportAsSVG } from "../state/state.js";
 import { SectionHeading } from "./SectionHeading.js";
@@ -35,6 +35,23 @@ class ChartArea extends WebComponent {
                 .${this.buttonsContainerClassName} {
                     display: flex;
                     gap: 1em;
+                }
+                .${this.buttonsContainerClassName} button {
+                    flex-grow: 1;
+                }
+                @media (min-width: ${BREAKPOINTS_PX.small + 1}px) and (max-width: ${BREAKPOINTS_PX.medium}px) {
+                    .${this.buttonsContainerClassName} {
+                        flex-direction: column;
+                        padding: 1em 0;
+                    }
+                }
+                @media (max-width: ${BREAKPOINTS_PX.small}px) {
+                    .${this.buttonsContainerClassName} {
+                        flex-direction: row;
+                        gap: 0.5em;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
                 }
             </style>
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.chartSectionId}">

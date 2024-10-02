@@ -16,9 +16,11 @@ class SectionHeading extends WebComponent {
                     width: 100%;
                 }
             </style>
-            <header class="${GLOBAL_CLASSNAMES.headingContainer} ${GLOBAL_CLASSNAMES.textWithIconContainer}">
-                <material-icon color=${COLORS.primary} name=${iconName} size="1.5em"></material-icon>
-                <h2>${headingText}</h2>
+            <div class="${GLOBAL_CLASSNAMES.headingContainer}">
+                <header class="${GLOBAL_CLASSNAMES.textWithIconContainer}">
+                    <material-icon color=${COLORS.primary} name=${iconName} size="1.5em"></material-icon>
+                    <h2>${headingText}</h2>
+                </header>
                 <slot name="${SectionHeading.rightEdgeSlotName}"></slot>
             </header>
         `;

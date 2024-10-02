@@ -1,4 +1,4 @@
-import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX } from "../constants/styles.js";
+import { BREAKPOINTS_PX, COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX, TEXT_FLEX_STYLES } from "../constants/styles.js";
 
 const styleSheet = `
     body {
@@ -55,21 +55,25 @@ const styleSheet = `
         font-family: "Material Symbols Outlined";
     }
     .${GLOBAL_CLASSNAMES.textWithIconContainer} {
-        align-items: center;
-        display: flex;
-        gap: 0.25em;
+        ${TEXT_FLEX_STYLES}
     }
-    header.${GLOBAL_CLASSNAMES.headingContainer} {
-        display: flex;
+    .${GLOBAL_CLASSNAMES.headingContainer}, .${GLOBAL_CLASSNAMES.headingContainer} header {
+        ${TEXT_FLEX_STYLES}
         justify-content: space-between;
         width: 100%;
     }
-    header.${GLOBAL_CLASSNAMES.headingContainer} h1,
-    header.${GLOBAL_CLASSNAMES.headingContainer} h2,
-    header.${GLOBAL_CLASSNAMES.headingContainer} h3,
-    header.${GLOBAL_CLASSNAMES.headingContainer} h4,
-    header.${GLOBAL_CLASSNAMES.headingContainer} h5,
-    header.${GLOBAL_CLASSNAMES.headingContainer} h6 {
+    @media (max-width: ${BREAKPOINTS_PX.small}px) {
+        .${GLOBAL_CLASSNAMES.headingContainer} {
+            align-items: stretch;
+            flex-direction: column;
+        }
+    }
+    .${GLOBAL_CLASSNAMES.headingContainer} h1,
+    .${GLOBAL_CLASSNAMES.headingContainer} h2,
+    .${GLOBAL_CLASSNAMES.headingContainer} h3,
+    .${GLOBAL_CLASSNAMES.headingContainer} h4,
+    .${GLOBAL_CLASSNAMES.headingContainer} h5,
+    .${GLOBAL_CLASSNAMES.headingContainer} h6 {
         flex-grow: 1;
     }
 `;

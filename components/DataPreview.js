@@ -48,6 +48,7 @@ class DataPreview extends WebComponent {
                 table {
                     border-collapse: collapse;
                     margin-top: 12px;
+                    min-width: 100%;
                 }
                 th, td {
                     padding: 2px;
