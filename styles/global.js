@@ -57,24 +57,8 @@ const styleSheet = `
     .${GLOBAL_CLASSNAMES.textWithIconContainer} {
         ${TEXT_FLEX_STYLES}
     }
-    .${GLOBAL_CLASSNAMES.headingContainer}, .${GLOBAL_CLASSNAMES.headingContainer} header {
-        ${TEXT_FLEX_STYLES}
-        justify-content: space-between;
-        width: 100%;
-    }
-    @media (max-width: ${BREAKPOINTS_PX.small}px) {
-        .${GLOBAL_CLASSNAMES.headingContainer} {
-            align-items: stretch;
-            flex-direction: column;
-        }
-    }
-    .${GLOBAL_CLASSNAMES.headingContainer} h1,
-    .${GLOBAL_CLASSNAMES.headingContainer} h2,
-    .${GLOBAL_CLASSNAMES.headingContainer} h3,
-    .${GLOBAL_CLASSNAMES.headingContainer} h4,
-    .${GLOBAL_CLASSNAMES.headingContainer} h5,
-    .${GLOBAL_CLASSNAMES.headingContainer} h6 {
-        flex-grow: 1;
+    .${GLOBAL_CLASSNAMES.hidden} {
+        display: none;
     }
 `;
 

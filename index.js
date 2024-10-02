@@ -1,5 +1,5 @@
 import { ChartArea } from "./components/ChartArea.js";
-import { ChartSettings } from "./components/ChartSettings.js";
+import { ChartDotTooltip } from "./components/ChartDotTooltip.js";
 import { DataInput } from "./components/DataInput.js";
 import { DataPreview } from "./components/DataPreview.js";
 import { DataVisualization } from "./components/DataVisualization.js";
@@ -14,7 +14,7 @@ import { addGlobalStyles } from "./styles/global.js";
 addGlobalStyles();
 
 defineComponent("chart-area", ChartArea);
-defineComponent("chart-settings", ChartSettings);
+defineComponent("chart-dot-tooltip", ChartDotTooltip);
 defineComponent("data-input", DataInput);
 defineComponent("data-preview", DataPreview);
 defineComponent("data-visualization", DataVisualization);

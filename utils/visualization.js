@@ -1,5 +1,13 @@
 import { CHART_PADDING, STROKE_WIDTH, SVG_NAMESPACE } from "../constants/charts.js";
 import { COLORS } from "../constants/styles.js";
+import {
+    displayDotTooltip,
+    displayLineTooltip,
+    hideDotTooltip,
+    hideLineTooltip,
+    positionDotTooltip,
+    positionLineTooltip
+} from "../state/state.js";
 
 const getLine = ({ color, isDashed, x1, y1, x2, y2 }) => {
     const line = document.createElementNS(SVG_NAMESPACE, "line");
@@ -26,15 +34,44 @@ const getText = ({ contents, x, y }) => {
     return text;
 };
 
-const getDot = ({ color, x, y }) => {
+const getCircle = ({ color, radius, x, y }) => {
     const circle = document.createElementNS(SVG_NAMESPACE, "circle");
 
     circle.setAttribute("cx", x);
     circle.setAttribute("cy", y);
-    circle.setAttribute("r", STROKE_WIDTH * 2);
+    circle.setAttribute("r", radius);
     circle.setAttribute("fill", color);
 
     return circle;
+};
+
+const getDot = ({ color, x, xLabel, xValue, y, yLabel, yValue }) => {
+    const dot = getCircle({
+        color,
+        radius: STROKE_WIDTH * 2,
+        x,
+        y
+    });
+
+    dot.addEventListener("mouseover", () => {
+        displayDotTooltip({
+            xLabel,
+            xValue,
+            yLabel,
+            yValue
+        });
+    });
+    dot.addEventListener("mousemove", event => {
+        positionDotTooltip({
+            leftPosition: event.pageX,
+            topPosition: event.pageY
+        });
+    });
+    dot.addEventListener("mouseout", () => {
+        hideDotTooltip();
+    });
+
+    return dot;
 };
 
 const generateSVGChart = ({ chartData, svgWidth }) => {
@@ -90,8 +127,6 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
         svg.appendChild(xTickText);
     });
 
-    const drawnYTicks = {};
-
     yLabels.forEach((header, index) => {
         // TODO handle case of more than 5 lines
         const lineColor = COLORS.chart[index];
@@ -106,7 +141,11 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
             const dot = getDot({
                 color: lineColor,
                 x,
-                y
+                xLabel,
+                xValue,
+                y,
+                yLabel: header,
+                yValue
             });
             svg.appendChild(dot);
         }
@@ -116,6 +155,20 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
         pathElement.setAttribute("fill", "none");
         pathElement.setAttribute("stroke", lineColor);
         pathElement.setAttribute("stroke-width", STROKE_WIDTH);
+        
+        pathElement.addEventListener("mouseover", () => {
+            displayLineTooltip(header);
+        });
+        pathElement.addEventListener("mousemove", event => {
+            positionLineTooltip({
+                leftPosition: event.pageX,
+                topPosition: event.pageY
+            });
+        });
+        pathElement.addEventListener("mouseout", () => {
+            hideLineTooltip();
+        });
+
         svg.appendChild(pathElement);
     });
 

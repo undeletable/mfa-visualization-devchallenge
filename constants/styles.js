@@ -11,6 +11,7 @@ const COLORS = {
     primary: "#003366",
     secondary: "#0056A2",
     text: "#000000",
+    transparent: "transparent",
     white: "#FFFFFF"
 };
 
@@ -20,7 +21,7 @@ const GLOBAL_CLASSNAMES = {
     buttonSecondary: "button-secondary",
     dataSection: "data-section",
     error: "error",
-    headingContainer: "heading-container",
+    hidden: "hidden",
     materialIcon: "material-symbols-outlined",
     textSmall: "text-small",
     textWithIconContainer: "text-with-icon"

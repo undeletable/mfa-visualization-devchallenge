@@ -1,9 +1,15 @@
 import { dispatchAction, handleAction } from "../lib/stateManagement.js";
 
 const ACTIONS = {
+    displayDotTooltip: "display-dot-tooltip",
+    displayLineTooltip: "display-line-tooltip",
     exportAsPNG: "export-png",
     exportAsSVG: "export-svg",
     generateChart: "generate-chart",
+    hideDotTooltip: "hide-dot-tooltip",
+    hideLineTooltip: "hide-line-tooltip",
+    positionDotTooltip: "position-dot-tooltip",
+    positionLineTooltip: "position-line-tooltip",
     setChartData: "set-chart-data",
     setChartDataError: "set-chart-data-error",
 };
@@ -66,7 +72,68 @@ const handleChartSVGExport = handler => {
     handleAction(ACTIONS.exportAsSVG, handler);
 }
 
+const displayDotTooltip = ({ xLabel, xValue, yLabel, yValue }) => {
+    dispatchAction(ACTIONS.displayDotTooltip, {
+        xLabel,
+        xValue,
+        yLabel,
+        yValue
+    });
+};
+
+const handleDotTooltipDisplay = handler => {
+    handleAction(ACTIONS.displayDotTooltip, handler);
+};
+
+const displayLineTooltip = lineLabel => {
+    dispatchAction(ACTIONS.displayLineTooltip, lineLabel);
+};
+
+const handleLineTooltipDisplay = handler => {
+    handleAction(ACTIONS.displayLineTooltip, handler);
+};
+
+const positionDotTooltip = ({ leftPosition, topPosition }) => {
+    dispatchAction(ACTIONS.positionDotTooltip, {
+        leftPosition,
+        topPosition
+    });
+};
+
+const handleDotTooltipPosition = handler => {
+    handleAction(ACTIONS.positionDotTooltip, handler);
+};
+
+const positionLineTooltip = ({ leftPosition, topPosition }) => {
+    dispatchAction(ACTIONS.positionLineTooltip, {
+        leftPosition,
+        topPosition
+    });
+};
+
+const handleLineTooltipPosition = handler => {
+    handleAction(ACTIONS.positionLineTooltip, handler);
+};
+
+const hideDotTooltip = () => {
+    dispatchAction(ACTIONS.hideDotTooltip);
+};
+
+const handleDotTooltipHide = handler => {
+    handleAction(ACTIONS.hideDotTooltip, handler);
+};
+
+const hideLineTooltip = () => {
+    dispatchAction(ACTIONS.hideLineTooltip);
+};
+
+const handleLineTooltipHide = handler => {
+    handleAction(ACTIONS.hideLineTooltip, handler);
+};
+
 export {
+    displayDotTooltip,
+    displayLineTooltip,
     exportAsPNG,
     exportAsSVG,
     generateChart,
@@ -77,6 +144,16 @@ export {
     handleChartGeneration,
     handleChartPNGExport,
     handleChartSVGExport,
+    handleDotTooltipDisplay,
+    handleLineTooltipDisplay,
+    handleDotTooltipHide,
+    handleLineTooltipHide,
+    handleDotTooltipPosition,
+    handleLineTooltipPosition,
+    hideDotTooltip,
+    hideLineTooltip,
+    positionDotTooltip,
+    positionLineTooltip,
     setChartData,
     setChartDataError,
 };
