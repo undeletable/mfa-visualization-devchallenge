@@ -1,9 +1,8 @@
 // TODO width should be dynamic
 // TODO colours should be different and taken from theme
 
-import { COLORS } from "../styles/constants.js";
-
-const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
+import { SVG_NAMESPACE } from "../constants/charts.js";
+import { COLORS } from "../constants/styles.js";
 
 const getLine = ({ color, isDashed, x1, y1, x2, y2 }) => {
     const line = document.createElementNS(SVG_NAMESPACE, "line");

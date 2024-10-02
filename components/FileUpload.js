@@ -1,6 +1,6 @@
+import { COLORS, HOVER_STYLE } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { setChartData, setChartDataError } from "../state/state.js";
-import { COLORS, HOVER_STYLE } from "../styles/constants.js";
 import { getDataForChart } from "../utils/dataProcessing.js";
 
 class FileUpload extends WebComponent {

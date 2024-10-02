@@ -1,5 +1,5 @@
+import { GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
-import { GLOBAL_CLASSNAMES } from "../styles/constants.js";
 
 class ChartArea extends WebComponent {
     chartSectionId = "chart";

@@ -1,4 +1,4 @@
-import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE } from "./constants.js";
+import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE } from "../constants/styles.js";
 
 const styleSheet = `
     body {

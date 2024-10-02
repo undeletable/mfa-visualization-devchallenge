@@ -1,6 +1,6 @@
+import { COLORS, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { generateChart, handleChartDataError, handleChartDataSelection } from "../state/state.js";
-import { COLORS, GLOBAL_CLASSNAMES } from "../styles/constants.js";
 
 class DataPreview extends WebComponent {
     previewSectionId = "preview";
