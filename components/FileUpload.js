@@ -1,12 +1,14 @@
 import { WebComponent } from "../lib/WebComponent.js";
 import { setChartData, setChartDataError } from "../state/state.js";
-import { CLASSNAMES, COLORS } from "../styles/constants.js";
+import { COLORS } from "../styles/constants.js";
 import { getDataForChart } from "../utils/dataProcessing.js";
 
 class FileUpload extends WebComponent {
     inputId = "file-upload";
 
     dragNDropAreaId = "drag-n-drop-area";
+
+    dragNDropAreaClassName = "drag-n-drop-area";
 
     processInput(file) {
         getDataForChart(file).then(setChartData).catch(setChartDataError);
@@ -40,13 +42,13 @@ class FileUpload extends WebComponent {
     render() {
         return `
             <style>
-                .${CLASSNAMES.dragNDropArea} {
+                .${this.dragNDropAreaClassName} {
                     border: 1px dashed ${COLORS.secondary};
                     cursor: pointer;
                 }
             </style>
             <label for=${this.inputId}>
-                <div class="${CLASSNAMES.dragNDropArea}" id=${this.dragNDropAreaId}>
+                <div class="${this.dragNDropAreaClassName}" id=${this.dragNDropAreaId}>
                     Drag your file here or click to select
                 </div>
             </label>

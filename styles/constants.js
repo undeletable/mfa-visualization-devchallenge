@@ -9,9 +9,8 @@ const COLORS = {
     white: "#FFFFFF"
 };
 
-const CLASSNAMES = {
-    dragNDropArea: "drag-n-drop-area",
+const GLOBAL_CLASSNAMES = {
     buttonPrimary: "primary",
 };
 
-export { CLASSNAMES, COLORS };
+export { COLORS, GLOBAL_CLASSNAMES };
