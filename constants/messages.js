@@ -1,5 +1,5 @@
 const MESSAGES = {
-    dragNDropAreaLabel: "Drag your file here or click to select from your device",
+    dragNDropAreaLabel: "Drag file with data here, or click to select it from your device",
     generateChartButtonLabel: "Generate line chart",
     noDataSelected: "No data selected",
     pageTitle: "Data visualization tool",
