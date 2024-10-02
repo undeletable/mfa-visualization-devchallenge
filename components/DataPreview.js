@@ -1,3 +1,4 @@
+import { MESSAGES } from "../constants/messages.js";
 import { COLORS, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { generateChart, handleChartDataError, handleChartDataSelection } from "../state/state.js";
@@ -58,16 +59,16 @@ class DataPreview extends WebComponent {
                     ? `
                         <button class="${GLOBAL_CLASSNAMES.buttonPrimary}" id="${this.generateButtonId}"
                         >
-                            Generate line chart
+                            ${MESSAGES.generateChartButtonLabel}
                         </button>
                         <table>
                             <thead>
-                                ${this.mapForRender(this.chartData.headers, header => `<th>${header}</th>`)}
+                                ${this.mapForRender(this.chartData.headers, header =>`<th>${header}</th>`)}
                             </thead>
                             <tbody>
                                 ${this.mapForRender(this.chartData.data, item =>
                                     `<tr>
-                                        ${this.mapForRender(this.chartData.headers, header => `<td>${item[header] || 0}</td>`)}
+                                        ${this.mapForRender(this.chartData.headers, header => `<td>${item[header]}</td>`)}
                                     </tr>`
                                 )}
                             <tbody>
@@ -76,9 +77,9 @@ class DataPreview extends WebComponent {
                     : `<p>
                         ${this.chartDataError
                             ? `<span class="${GLOBAL_CLASSNAMES.error}">
-                                Unable to parse data: ${this.chartDataError.message}
+                                ${MESSAGES.unableToParseData}: ${this.chartDataError.message}
                             </span>`
-                            : "<span>No data selected</span>"
+                            : `<span>${MESSAGES.noDataSelected}</span>`
                         }
                     </p>`
                 }

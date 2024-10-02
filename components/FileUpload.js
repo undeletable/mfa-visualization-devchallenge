@@ -1,3 +1,4 @@
+import { MESSAGES } from "../constants/messages.js";
 import { COLORS, HOVER_STYLE } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
 import { setChartData, setChartDataError } from "../state/state.js";
@@ -65,7 +66,7 @@ class FileUpload extends WebComponent {
             </style>
             <label for=${this.inputId}>
                 <div class="${this.dragNDropAreaClassName}" id=${this.dragNDropAreaId}>
-                    <span>Drag your file here or click to select</span>
+                    <span>${MESSAGES.dragNDropAreaLabel}</span>
                 </div>
             </label>
             <input

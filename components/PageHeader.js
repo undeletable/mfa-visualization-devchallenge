@@ -1,3 +1,4 @@
+import { MESSAGES } from "../constants/messages.js";
 import { WebComponent } from "../lib/WebComponent.js";
 
 class PageHeader extends WebComponent {
@@ -9,7 +10,7 @@ class PageHeader extends WebComponent {
                 }
             </style>
             <header>
-                <h1>Data visualizer</h1>
+                <h1>${MESSAGES.pageTitle}</h1>
             </header>
         `;
     }
