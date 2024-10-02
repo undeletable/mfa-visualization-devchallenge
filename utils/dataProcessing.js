@@ -3,6 +3,7 @@ const CELL_COORDINATE_PATTERN = /^[A-Z]+(?<rowNumber>\d+)$/;
 
 const getFileExtension = fileName => {
     const patternMatch = fileName.match(FILE_NAME_PATTERN);
+
     return patternMatch.groups.extension;
 };
 
@@ -22,6 +23,7 @@ const getDataFromExcelSpreadsheet = contents => {
     let currentHeader;
     let currentIndex = 0;
     const cellCoordinates = Object.keys(firstSheetData).sort();
+
     for (let cellCoordinate of cellCoordinates) {
         if (cellCoordinate === "!ref") {
             continue;
@@ -42,6 +44,7 @@ const getDataFromExcelSpreadsheet = contents => {
             currentIndex++;
         }
     }
+
     return {
         headers,
         data
@@ -54,6 +57,7 @@ const getDataFromCSVFile = (contents) => {
     const dataRows = rows.slice(1);
     const headers = getCSVRowCells(headersRow);
     const data = [];
+
     for (let currentRow of dataRows) {
         if (currentRow) {
             const currentRowObject = {};
@@ -68,6 +72,7 @@ const getDataFromCSVFile = (contents) => {
             data.push(currentRowObject);
         }
     }
+
     return {
         headers,
         data
@@ -77,6 +82,7 @@ const getDataFromCSVFile = (contents) => {
 const getDataFromJSONFile = contents => {
     const data = JSON.parse(contents);
     const headersMap = {};
+
     for (let currentRow of data) {
         const presentKeys = Object.keys(currentRow);
         for (let key of presentKeys) {
@@ -86,6 +92,7 @@ const getDataFromJSONFile = contents => {
         }
     }
     const headers = Object.keys(headersMap);
+
     return {
         headers,
         data
@@ -94,23 +101,29 @@ const getDataFromJSONFile = contents => {
 
 const getJSONContents = (fileName, contents) => {
     const extension = getFileExtension(fileName);
+
     if (isExcelSpreadsheet(extension)) {
         return getDataFromExcelSpreadsheet(contents);
     }
+
     if (isCSVFile(extension)) {
         return getDataFromCSVFile(contents);
     }
+
     return getDataFromJSONFile(contents);
 };
 
 const getNormalizedData = ({ headers, data }) => {
     const dataMap = {};
     const xLabel = headers[0];
+
     for (let dataItem of data) {
         const xValueNumeric = Number(dataItem[xLabel] || 0);
+
         if (!Number.isFinite(xValueNumeric)) {
             continue;
         }
+
         const normalizedDataItem = {};
         for (let dataKey in dataItem) {
             const value = dataItem[dataKey];
@@ -119,6 +132,7 @@ const getNormalizedData = ({ headers, data }) => {
                 normalizedDataItem[dataKey] = numericValue;
             }
         }
+
         if (dataMap.hasOwnProperty(xValueNumeric)) {
             const existingValuesObject = dataMap[xValueNumeric];
             for (let dataKey in normalizedDataItem) {
@@ -131,6 +145,7 @@ const getNormalizedData = ({ headers, data }) => {
             delete dataMap[xValueNumeric][xLabel];
         }
     }
+
     const normalizedData = [];
     for (let xValue in dataMap) {
         normalizedData.push({
@@ -138,6 +153,7 @@ const getNormalizedData = ({ headers, data }) => {
             ...dataMap[xValue]
         });
     }
+
     return {
         headers,
         data: normalizedData
@@ -148,6 +164,7 @@ const getNormalizedData = ({ headers, data }) => {
 const getDataForChart = fileData => {
     const { promise, reject, resolve } = Promise.withResolvers();
     const fileReader = new FileReader();
+
     fileReader.onload = event => {
         try {
             const contents = event.target.result;
@@ -160,6 +177,7 @@ const getDataForChart = fileData => {
         }
     };
     fileReader.readAsText(fileData);
+
     return promise;
 };
 

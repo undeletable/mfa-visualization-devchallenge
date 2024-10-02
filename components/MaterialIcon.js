@@ -7,6 +7,7 @@ class MaterialIcon extends WebComponent {
     render() {
         const name = this.getAttribute("name");
         const size = this.getAttribute("size");
+
         return `
             ${size ? `
                 <style>
