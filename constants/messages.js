@@ -2,10 +2,10 @@ const MESSAGES = {
     dragNDropAreaLabel: "Drag your file here or click to select",
     generateChartButtonLabel: "Generate line chart",
     noDataSelected: "No data selected",
-    pageTitle: "Data visualizer",
-    preview: "Preview",
+    pageTitle: "Data visualization tool",
+    preview: "Data preview",
     unableToParseData: "Unable to parse data",
-    visualization: "Visualization"
+    visualization: "Data visualization"
 };
 
 export { MESSAGES };

@@ -43,11 +43,13 @@ class DataPreview extends WebComponent {
                     align-items: flex-start;
                     display: flex;
                     flex-direction: column;
-                    gap: 5px;
                 }
                 table, th, td {
                     border: 1px solid ${COLORS.secondary};
                     border-collapse: collapse;
+                }
+                table {
+                    margin-top: 12px;
                 }
                 th, td {
                     padding: 2px;
@@ -80,14 +82,14 @@ class DataPreview extends WebComponent {
                             <tbody>
                         </table>
                     `
-                    : `<p>
+                    : `<div>
                         ${this.chartDataError
                             ? `<span class="${GLOBAL_CLASSNAMES.error}">
                                 ${MESSAGES.unableToParseData}: ${this.chartDataError.message}
                             </span>`
                             : `<span>${MESSAGES.noDataSelected}</span>`
                         }
-                    </p>`
+                    </div>`
                 }
             </section>
         `;

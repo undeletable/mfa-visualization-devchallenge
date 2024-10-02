@@ -25,7 +25,7 @@ const getText = ({ contents, x, y }) => {
     return text;
 };
 
-const generateSVGChart = chartData => {
+const generateSVGChart = ({ chartData, svgWidth }) => {
     const xLabel = chartData.headers[0];
     const yLabels = chartData.headers.slice(1);
     const sortedChartData = chartData.data.toSorted((itemA, itemB) => {
@@ -39,8 +39,7 @@ const generateSVGChart = chartData => {
     const xRange = maxXValue - minXValue;
     const maxYValue = Math.max(...maxYValues);
 
-    const svgWidth = 600;
-    const svgHeight = 400;
+    const svgHeight = svgWidth / 1.5;
     const padding = 50;
     const chartWidth = svgWidth - padding * 2;
     const chartHeight = svgHeight - padding * 2;

@@ -1,4 +1,4 @@
-import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE } from "../constants/styles.js";
+import { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX } from "../constants/styles.js";
 
 const styleSheet = `
     body {
@@ -6,7 +6,7 @@ const styleSheet = `
         font-family: sans-serif;
         font-size: 16px;
         line-height: 24px;
-        margin: 5px;
+        margin: ${PAGE_MARGIN_PX}px;
     }
     main {
         width: 100%;

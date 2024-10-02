@@ -20,6 +20,8 @@ const GLOBAL_CLASSNAMES = {
     textWithIconContainer: "text-with-icon"
 };
 
-const HOVER_STYLE = "opacity: 0.8;"
+const HOVER_STYLE = "opacity: 0.8;";
 
-export { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE };
+const PAGE_MARGIN_PX = 5;
+
+export { COLORS, GLOBAL_CLASSNAMES, HOVER_STYLE, PAGE_MARGIN_PX };
