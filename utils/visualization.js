@@ -5,8 +5,6 @@ import {
     displayLineTooltip,
     hideDotTooltip,
     hideLineTooltip,
-    positionDotTooltip,
-    positionLineTooltip
 } from "../state/state.js";
 
 const getLine = ({ color, isDashed, x1, y1, x2, y2 }) => {
@@ -34,6 +32,18 @@ const getText = ({ contents, x, y }) => {
     return text;
 };
 
+const getXTickText = ({ contents, x, y }) => {
+    const xTickText = getText({
+        contents,
+        x,
+        y
+    });
+
+    xTickText.setAttribute("transform", `rotate(45 ${x} ${y})`);
+
+    return xTickText;
+};
+
 const getCircle = ({ color, radius, x, y }) => {
     const circle = document.createElementNS(SVG_NAMESPACE, "circle");
 
@@ -53,8 +63,11 @@ const getDot = ({ color, x, xLabel, xValue, y, yLabel, yValue }) => {
         y
     });
 
-    dot.addEventListener("mouseover", () => {
+    // TODO fix flickering
+    dot.addEventListener("mouseenter", event => {
         displayDotTooltip({
+            leftPosition: event.pageX,
+            topPosition: event.pageY,
             xLabel,
             xValue,
             yLabel,
@@ -62,12 +75,16 @@ const getDot = ({ color, x, xLabel, xValue, y, yLabel, yValue }) => {
         });
     });
     dot.addEventListener("mousemove", event => {
-        positionDotTooltip({
+        displayDotTooltip({
             leftPosition: event.pageX,
-            topPosition: event.pageY
+            topPosition: event.pageY,
+            xLabel,
+            xValue,
+            yLabel,
+            yValue
         });
     });
-    dot.addEventListener("mouseout", () => {
+    dot.addEventListener("mouseleave", () => {
         hideDotTooltip();
     });
 
@@ -119,7 +136,7 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
             svg.appendChild(xTickLine);
         }
 
-        const xTickText = getText({
+        const xTickText = getXTickText({
             contents: xValue,
             x: scaleX(xValue) + CHART_PADDING,
             y: svgHeight - CHART_PADDING / 2
@@ -156,16 +173,22 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
         pathElement.setAttribute("stroke", lineColor);
         pathElement.setAttribute("stroke-width", STROKE_WIDTH);
         
-        pathElement.addEventListener("mouseover", () => {
-            displayLineTooltip(header);
-        });
-        pathElement.addEventListener("mousemove", event => {
-            positionLineTooltip({
+        // TODO fix flickering
+        pathElement.addEventListener("mouseenter", event => {
+            displayLineTooltip({
                 leftPosition: event.pageX,
-                topPosition: event.pageY
+                topPosition: event.pageY,
+                label: header
             });
         });
-        pathElement.addEventListener("mouseout", () => {
+        pathElement.addEventListener("mousemove", event => {
+            displayLineTooltip({
+                leftPosition: event.pageX,
+                topPosition: event.pageY,
+                label: header
+            });
+        });
+        pathElement.addEventListener("mouseleave", () => {
             hideLineTooltip();
         });
 

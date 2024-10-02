@@ -8,8 +8,6 @@ const ACTIONS = {
     generateChart: "generate-chart",
     hideDotTooltip: "hide-dot-tooltip",
     hideLineTooltip: "hide-line-tooltip",
-    positionDotTooltip: "position-dot-tooltip",
-    positionLineTooltip: "position-line-tooltip",
     setChartData: "set-chart-data",
     setChartDataError: "set-chart-data-error",
 };
@@ -72,8 +70,10 @@ const handleChartSVGExport = handler => {
     handleAction(ACTIONS.exportAsSVG, handler);
 }
 
-const displayDotTooltip = ({ xLabel, xValue, yLabel, yValue }) => {
+const displayDotTooltip = ({ leftPosition, topPosition, xLabel, xValue, yLabel, yValue }) => {
     dispatchAction(ACTIONS.displayDotTooltip, {
+        leftPosition,
+        topPosition,
         xLabel,
         xValue,
         yLabel,
@@ -85,34 +85,16 @@ const handleDotTooltipDisplay = handler => {
     handleAction(ACTIONS.displayDotTooltip, handler);
 };
 
-const displayLineTooltip = lineLabel => {
-    dispatchAction(ACTIONS.displayLineTooltip, lineLabel);
+const displayLineTooltip = ({ label, leftPosition, topPosition }) => {
+    dispatchAction(ACTIONS.displayLineTooltip, {
+        label,
+        leftPosition,
+        topPosition
+    });
 };
 
 const handleLineTooltipDisplay = handler => {
     handleAction(ACTIONS.displayLineTooltip, handler);
-};
-
-const positionDotTooltip = ({ leftPosition, topPosition }) => {
-    dispatchAction(ACTIONS.positionDotTooltip, {
-        leftPosition,
-        topPosition
-    });
-};
-
-const handleDotTooltipPosition = handler => {
-    handleAction(ACTIONS.positionDotTooltip, handler);
-};
-
-const positionLineTooltip = ({ leftPosition, topPosition }) => {
-    dispatchAction(ACTIONS.positionLineTooltip, {
-        leftPosition,
-        topPosition
-    });
-};
-
-const handleLineTooltipPosition = handler => {
-    handleAction(ACTIONS.positionLineTooltip, handler);
 };
 
 const hideDotTooltip = () => {
@@ -148,12 +130,8 @@ export {
     handleLineTooltipDisplay,
     handleDotTooltipHide,
     handleLineTooltipHide,
-    handleDotTooltipPosition,
-    handleLineTooltipPosition,
     hideDotTooltip,
     hideLineTooltip,
-    positionDotTooltip,
-    positionLineTooltip,
     setChartData,
     setChartDataError,
 };

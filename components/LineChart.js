@@ -1,6 +1,14 @@
 import { COLORS, GLOBAL_CLASSNAMES } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
-import { getChartData, handleChartPNGExport, handleChartSVGExport, handleDotTooltipDisplay, handleDotTooltipHide, handleDotTooltipPosition, handleLineTooltipDisplay, handleLineTooltipHide, handleLineTooltipPosition } from "../state/state.js";
+import {
+    getChartData,
+    handleChartPNGExport,
+    handleChartSVGExport,
+    handleDotTooltipDisplay,
+    handleDotTooltipHide,
+    handleLineTooltipDisplay,
+    handleLineTooltipHide
+} from "../state/state.js";
 import { exportPNG, exportSVG } from "../utils/export.js";
 import { generateSVGChart } from "../utils/visualization.js";
 
@@ -41,34 +49,44 @@ class LineChart extends WebComponent {
         chartContainerElement.appendChild(svg);
         handleChartSVGExport(() => exportSVG(svg));
         handleChartPNGExport(() => exportPNG(svg));
-        handleDotTooltipDisplay(({ xLabel, xValue, yLabel, yValue }) => {
-            this.showTooltip(`
-                <chart-dot-tooltip
-                    xLabel="${xLabel}"
-                    xValue="${xValue}"
-                    yLabel="${yLabel}"
-                    yValue="${yValue}"
-                >
-                </chart-dot-tooltip>
-            `);
-        });
-        handleDotTooltipPosition(({ leftPosition, topPosition }) => {
-            this.positionTooltip({
+        
+        const tooltipElement = this.getElement(this.tooltipId);
+        
+        const showTooltip = ({ contents, leftPosition, topPosition }) => {
+            tooltipElement.style.left = `${leftPosition}px`;
+            tooltipElement.style.top = `${topPosition}px`;
+            tooltipElement.innerHTML = contents;
+            tooltipElement.classList.remove(GLOBAL_CLASSNAMES.hidden);
+        }
+    
+        const hideTooltip = () => {
+            tooltipElement.classList.add(GLOBAL_CLASSNAMES.hidden);
+        };
+        
+        handleDotTooltipDisplay(({ leftPosition, topPosition, xLabel, xValue, yLabel, yValue }) => {
+            showTooltip({
+                contents:`
+                    <chart-dot-tooltip
+                        xLabel="${xLabel}"
+                        xValue="${xValue}"
+                        yLabel="${yLabel}"
+                        yValue="${yValue}"
+                    >
+                    </chart-dot-tooltip>
+                `,
                 leftPosition,
                 topPosition
             });
         });
-        handleDotTooltipHide(this.hideTooltip);
-        handleLineTooltipDisplay(label => {
-            this.showTooltip(`<label>${label}</label>`);
-        });
-        handleLineTooltipPosition(({ leftPosition, topPosition }) => {
-            this.positionTooltip({
+        handleDotTooltipHide(hideTooltip);
+        handleLineTooltipDisplay(({ label, leftPosition, topPosition }) => {
+            showTooltip({
+                contents: `<label>${label}</label>`,
                 leftPosition,
                 topPosition
             });
         });
-        handleLineTooltipHide(this.hideTooltip);
+        handleLineTooltipHide(hideTooltip);
     }
 
     render() {
