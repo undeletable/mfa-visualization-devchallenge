@@ -1,7 +1,7 @@
 // TODO width should be dynamic
 // TODO colours should be different and taken from theme
 
-import { SVG_NAMESPACE } from "../constants/charts.js";
+import { CHART_PADDING, STROKE_WIDTH, SVG_NAMESPACE } from "../constants/charts.js";
 import { COLORS } from "../constants/styles.js";
 
 const getLine = ({ color, isDashed, x1, y1, x2, y2 }) => {
@@ -25,6 +25,15 @@ const getText = ({ contents, x, y }) => {
     return text;
 };
 
+const getDot = ({ color, x, y }) => {
+    const circle = document.createElementNS(SVG_NAMESPACE, "circle");
+    circle.setAttribute("cx", x);
+    circle.setAttribute("cy", y);
+    circle.setAttribute("r", STROKE_WIDTH * 2);
+    circle.setAttribute("fill", color);
+    return circle;
+};
+
 const generateSVGChart = ({ chartData, svgWidth }) => {
     const xLabel = chartData.headers[0];
     const yLabels = chartData.headers.slice(1);
@@ -40,7 +49,7 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
     const maxYValue = Math.max(...maxYValues);
 
     const svgHeight = svgWidth / 1.5;
-    const padding = 50;
+    const padding = CHART_PADDING;
     const chartWidth = svgWidth - padding * 2;
     const chartHeight = svgHeight - padding * 2;
 
@@ -108,13 +117,20 @@ const generateSVGChart = ({ chartData, svgWidth }) => {
                 svg.appendChild(yTickText);
                 drawnYTicks[y] = true;
             }
+
+            const dot = getDot({
+                color: lineColor,
+                x,
+                y
+            });
+            svg.appendChild(dot);
         }
 
         const pathElement = document.createElementNS(SVG_NAMESPACE, "path");
         pathElement.setAttribute("d", path);
         pathElement.setAttribute("fill", "none");
         pathElement.setAttribute("stroke", lineColor);
-        pathElement.setAttribute("stroke-width", "2");
+        pathElement.setAttribute("stroke-width", STROKE_WIDTH);
         svg.appendChild(pathElement);
     });
 
