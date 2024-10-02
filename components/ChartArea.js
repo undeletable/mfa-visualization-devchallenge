@@ -35,6 +35,7 @@ class ChartArea extends WebComponent {
     }
 
     // TODO add chart settings and zoom
+    // TODO support different kinds of chart
     render() {
         return `
             <style>

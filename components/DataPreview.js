@@ -61,7 +61,7 @@ class DataPreview extends WebComponent {
             <section class="${GLOBAL_CLASSNAMES.dataSection}" id="${this.previewSectionId}">
                 <section-heading headingText="${MESSAGES.preview}" iconName="data_table">
                     ${this.chartData
-                        ? `<
+                        ? `<button
                             aria-label="${MESSAGES.generateChartButtonLabel}"
                             class="${GLOBAL_CLASSNAMES.buttonPrimary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
                             id="${this.generateButtonId}"

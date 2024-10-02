@@ -7,6 +7,7 @@ const styleSheet = `
         font-size: 16px;
         line-height: 24px;
         margin: ${PAGE_MARGIN_PX}px;
+        color-scheme: dark;
     }
     main {
         width: 100%;
