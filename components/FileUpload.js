@@ -72,7 +72,7 @@ class FileUpload extends WebComponent {
                 </div>
             </label>
             <input
-                accept=".csv,.json,.xls,.xlsx"
+                accept=".csv,.json" <!-- TODO add xls and xlsx support -->
                 hidden
                 id=${this.inputId}
                 type="file"
