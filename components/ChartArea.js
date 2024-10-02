@@ -64,6 +64,7 @@ class ChartArea extends WebComponent {
                 <section-heading headingText="${MESSAGES.visualization}" iconName="monitoring">
                     <div class="${this.buttonsContainerClassName}" slot="${SectionHeading.rightEdgeSlotName}">
                         <button
+                            aria-label="${MESSAGES.svgExport}"
                             class="${GLOBAL_CLASSNAMES.buttonSecondary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
                             id="${this.svgExportButtonId}"
                         >
@@ -71,6 +72,7 @@ class ChartArea extends WebComponent {
                             ${MESSAGES.svgExport}
                         </button>
                         <button
+                            aria-label="${MESSAGES.pngExport}"
                             class="${GLOBAL_CLASSNAMES.buttonSecondary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
                             id="${this.pngExportButtonId}"
                         >
@@ -78,6 +80,7 @@ class ChartArea extends WebComponent {
                             ${MESSAGES.pngExport}
                         </button>
                         <button
+                            aria-label="${MESSAGES.print}"
                             class="${GLOBAL_CLASSNAMES.buttonSecondary} ${GLOBAL_CLASSNAMES.textWithIconContainer}"
                             id="${this.printButtonId}"
                         >

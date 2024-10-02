@@ -24,6 +24,7 @@ class LineChart extends WebComponent {
 
     showTooltip(contents) {
         const tooltipElement = this.getElement(this.tooltipId);
+        tooltipElement.removeAttribute("aria-hidden");
         tooltipElement.classList.remove(GLOBAL_CLASSNAMES.hidden);
         tooltipElement.innerHTML = contents;
     }
@@ -36,6 +37,7 @@ class LineChart extends WebComponent {
 
     hideTooltip() {
         const tooltipElement = this.getElement(this.tooltipId);
+        tooltipElement.setAttribute("aria-hidden", "true");
         tooltipElement.classList.add(GLOBAL_CLASSNAMES.hidden);
     }
 

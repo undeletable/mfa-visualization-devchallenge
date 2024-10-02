@@ -66,7 +66,7 @@ class FileUpload extends WebComponent {
                     ${HOVER_STYLE};
                 }
             </style>
-            <label for=${this.inputId}>
+            <label for="${this.inputId}">
                 <div class="${this.dragNDropAreaClassName}" id=${this.dragNDropAreaId}>
                     <material-icon name="upload_file" size="2em"></material-icon>
                     <span>${MESSAGES.dragNDropAreaLabel}</span>
@@ -75,8 +75,9 @@ class FileUpload extends WebComponent {
             <!-- TODO add xls and xlsx support -->
             <input
                 accept=".csv,.json"
+                aria-label="${MESSAGES.dragNDropAreaLabel}"
                 hidden
-                id=${this.inputId}
+                id="${this.inputId}"
                 type="file"
             >
             </input>
