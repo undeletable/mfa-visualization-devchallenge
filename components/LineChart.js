@@ -1,6 +1,6 @@
-import { PAGE_MARGIN_PX } from "../constants/styles.js";
 import { WebComponent } from "../lib/WebComponent.js";
-import { getChartData } from "../state/state.js";
+import { getChartData, handleChartPNGExport, handleChartSVGExport } from "../state/state.js";
+import { exportPNG, exportSVG } from "../utils/export.js";
 import { generateSVGChart } from "../utils/visualization.js";
 
 class LineChart extends WebComponent {
@@ -17,6 +17,8 @@ class LineChart extends WebComponent {
             svgWidth
         });
         chartContainerElement.appendChild(svg);
+        handleChartSVGExport(() => exportSVG(svg));
+        handleChartPNGExport(() => exportPNG(svg));
     }
 
     render() {

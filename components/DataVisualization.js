@@ -13,11 +13,7 @@ class DataVisualization extends WebComponent {
 
     render() {
         return this.isChartGenerated
-            ? `
-                <chart-area></chart-area>
-                <chart-settings></chart-settings>
-                <export-controls></export-controls>
-            `
+            ? "<chart-area></chart-area>"
             : "";
     }
 }

@@ -3,7 +3,9 @@ const MESSAGES = {
     generateChartButtonLabel: "Generate line chart",
     noDataSelected: "No data selected",
     pageTitle: "Data visualization tool",
+    pngExport: "Export as PNG",
     preview: "Data preview",
+    svgExport: "Export as SVG",
     unableToParseData: "Unable to parse data",
     visualization: "Data visualization"
 };
