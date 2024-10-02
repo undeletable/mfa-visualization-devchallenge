@@ -11,6 +11,7 @@ class DataVisualization extends WebComponent {
         });
     }
 
+    // TODO handle loading
     render() {
         return this.isChartGenerated
             ? "<chart-area></chart-area>"

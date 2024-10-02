@@ -34,6 +34,7 @@ class ChartArea extends WebComponent {
         });
     }
 
+    // TODO add chart settings and zoom
     render() {
         return `
             <style>
@@ -83,6 +84,7 @@ class ChartArea extends WebComponent {
                             <material-icon name="print" size="1.5em"></material-icon>
                             ${MESSAGES.print}
                         </button>
+                        <!-- TODO add PDF export -->
                     </div>
                 </section-heading>
                 <line-chart></line-chart>

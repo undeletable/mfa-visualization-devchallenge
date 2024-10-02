@@ -91,6 +91,7 @@ class LineChart extends WebComponent {
         handleLineTooltipHide(hideTooltip);
     }
 
+    // TODO add animations
     render() {
         return `
             <style>
