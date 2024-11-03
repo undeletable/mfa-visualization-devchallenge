@@ -1,5 +1,9 @@
 # Task for Online round of DEV Challenge XXI
 
+## Disclaimer
+
+The solution is incomplete and has bugs. If I have free time and inspiration, I'll do my best to finish it.
+
 ## Description
 
 Ministry of Foreign Affairs of Ukraine (MFA of Ukraine) is a central executive body whose activities are directed and coordinated by the Cabinet of Ministers of Ukraine. The MFA of Ukraine is the main body in the system of central executive authorities in formulating and ensuring the implementation of the state policy in the field of foreign relations of Ukraine.
